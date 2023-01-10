@@ -17,30 +17,6 @@ name = CG_2;
 {
 code = "uni25A1.003 uni2B1A.003 u18B00.003 u18B01.003 u18B02.003 u18B03.003 u18B04.003 u18B05.003 u18B06.003 u18B07.003 u18B08.003 u18B09.003 u18B0A.003 u18B0B.003 u18B0C.003 u18B0D.003 u18B0E.003 u18B0F.003 u18B10.003 u18B11.003 u18B12.003 u18B13.003 u18B14.003 u18B15.003 u18B16.003 u18B17.003 u18B18.003 u18B19.003 u18B1A.003 u18B1B.003 u18B1C.003 u18B1D.003 u18B1E.003 u18B1F.003 u18B20.003 u18B21.003 u18B22.003 u18B23.003 u18B24.003 u18B25.003 u18B26.003 u18B27.003 u18B28.003 u18B29.003 u18B2A.003 u18B2B.003 u18B2C.003 u18B2D.003 u18B2E.003 u18B2F.003 u18B30.003 u18B31.003 u18B32.003 u18B33.003 u18B34.003 u18B35.003 u18B36.003 u18B37.003 u18B38.003 u18B39.003 u18B3A.003 u18B3B.003 u18B3C.003 u18B3D.003 u18B3E.003 u18B3F.003 u18B40.003 u18B41.003 u18B42.003 u18B43.003 u18B44.003 u18B45.003 u18B46.003 u18B47.003 u18B48.003 u18B49.003 u18B4A.003 u18B4B.003 u18B4C.003 u18B4D.003 u18B4E.003 u18B4F.003 u18B50.003 u18B51.003 u18B52.003 u18B53.003 u18B54.003 u18B55.003 u18B56.003 u18B57.003 u18B58.003 u18B59.003 u18B5A.003 u18B5B.003 u18B5C.003 u18B5D.003 u18B5E.003 u18B5F.003 u18B60.003 u18B61.003 u18B62.003 u18B63.003 u18B64.003 u18B65.003 u18B66.003 u18B67.003 u18B68.003 u18B69.003 u18B6A.003 u18B6B.003 u18B6C.003 u18B6D.003 u18B6E.003 u18B6F.003 u18B70.003 u18B71.003 u18B72.003 u18B73.003 u18B74.003 u18B75.003 u18B76.003 u18B77.003 u18B78.003 u18B79.003 u18B7A.003 u18B7B.003 u18B7C.003 u18B7D.003 u18B7E.003 u18B7F.003 u18B80.003 u18B81.003 u18B82.003 u18B83.003 u18B84.003 u18B85.003 u18B86.003 u18B87.003 u18B88.003 u18B89.003 u18B8A.003 u18B8B.003 u18B8C.003 u18B8D.003 u18B8E.003 u18B8F.003 u18B90.003 u18B91.003 u18B92.003 u18B93.003 u18B94.003 u18B95.003 u18B96.003 u18B97.003 u18B98.003 u18B99.003 u18B9A.003 u18B9B.003 u18B9C.003 u18B9D.003 u18B9E.003 u18B9F.003 u18BA0.003 u18BA1.003 u18BA2.003 u18BA3.003 u18BA4.003 u18BA5.003 u18BA6.003 u18BA7.003 u18BA8.003 u18BA9.003 u18BAA.003 u18BAB.003 u18BAC.003 u18BAD.003 u18BAE.003 u18BAF.003 u18BB0.003 u18BB1.003 u18BB2.003 u18BB3.003 u18BB4.003 u18BB5.003 u18BB6.003 u18BB7.003 u18BB8.003 u18BB9.003 u18BBA.003 u18BBB.003 u18BBC.003 u18BBD.003 u18BBE.003 u18BBF.003 u18BC0.003 u18BC1.003 u18BC2.003 u18BC3.003 u18BC4.003 u18BC5.003 u18BC6.003 u18BC7.003 u18BC8.003 u18BC9.003 u18BCA.003 u18BCB.003 u18BCC.003 u18BCD.003 u18BCE.003 u18BCF.003 u18BD0.003 u18BD1.003 u18BD2.003 u18BD3.003 u18BD4.003 u18BD5.003 u18BD6.003 u18BD7.003 u18BD8.003 u18BD9.003 u18BDA.003 u18BDB.003 u18BDC.003 u18BDD.003 u18BDE.003 u18BDF.003 u18BE0.003 u18BE1.003 u18BE2.003 u18BE3.003 u18BE4.003 u18BE5.003 u18BE6.003 u18BE7.003 u18BE8.003 u18BE9.003 u18BEA.003 u18BEB.003 u18BEC.003 u18BED.003 u18BEE.003 u18BEF.003 u18BF0.003 u18BF1.003 u18BF2.003 u18BF3.003 u18BF4.003 u18BF5.003 u18BF6.003 u18BF7.003 u18BF8.003 u18BF9.003 u18BFA.003 u18BFB.003 u18BFC.003 u18BFD.003 u18BFE.003 u18BFF.003 u18C00.003 u18C01.003 u18C02.003 u18C03.003 u18C04.003 u18C05.003 u18C06.003 u18C07.003 u18C08.003 u18C09.003 u18C0A.003 u18C0B.003 u18C0C.003 u18C0D.003 u18C0E.003 u18C0F.003 u18C10.003 u18C11.003 u18C12.003 u18C13.003 u18C14.003 u18C15.003 u18C16.003 u18C17.003 u18C18.003 u18C19.003 u18C1A.003 u18C1B.003 u18C1C.003 u18C1D.003 u18C1E.003 u18C1F.003 u18C20.003 u18C21.003 u18C22.003 u18C23.003 u18C24.003 u18C25.003 u18C26.003 u18C27.003 u18C28.003 u18C29.003 u18C2A.003 u18C2B.003 u18C2C.003 u18C2D.003 u18C2E.003 u18C2F.003 u18C30.003 u18C31.003 u18C32.003 u18C33.003 u18C34.003 u18C35.003 u18C36.003 u18C37.003 u18C38.003 u18C39.003 u18C3A.003 u18C3B.003 u18C3C.003 u18C3D.003 u18C3E.003 u18C3F.003 u18C40.003 u18C41.003 u18C42.003 u18C43.003 u18C44.003 u18C45.003 u18C46.003 u18C47.003 u18C48.003 u18C49.003 u18C4A.003 u18C4B.003 u18C4C.003 u18C4D.003 u18C4E.003 u18C4F.003 u18C50.003 u18C51.003 u18C52.003 u18C53.003 u18C54.003 u18C55.003 u18C56.003 u18C57.003 u18C58.003 u18C59.003 u18C5A.003 u18C5B.003 u18C5C.003 u18C5D.003 u18C5E.003 u18C5F.003 u18C60.003 u18C61.003 u18C62.003 u18C63.003 u18C64.003 u18C65.003 u18C66.003 u18C67.003 u18C68.003 u18C69.003 u18C6A.003 u18C6B.003 u18C6C.003 u18C6D.003 u18C6E.003 u18C6F.003 u18C70.003 u18C71.003 u18C72.003 u18C73.003 u18C74.003 u18C75.003 u18C76.003 u18C77.003 u18C78.003 u18C79.003 u18C7A.003 u18C7B.003 u18C7C.003 u18C7D.003 u18C7E.003 u18C7F.003 u18C80.003 u18C81.003 u18C82.003 u18C83.003 u18C84.003 u18C85.003 u18C86.003 u18C87.003 u18C88.003 u18C89.003 u18C8A.003 u18C8B.003 u18C8C.003 u18C8D.003 u18C8E.003 u18C8F.003 u18C90.003 u18C91.003 u18C92.003 u18C93.003 u18C94.003 u18C95.003 u18C96.003 u18C97.003 u18C98.003 u18C99.003 u18C9A.003 u18C9B.003 u18C9C.003 u18C9D.003 u18C9E.003 u18C9F.003 u18CA0.003 u18CA1.003 u18CA2.003 u18CA3.003 u18CA4.003 u18CA5.003 u18CA6.003 u18CA7.003 u18CA8.003 u18CA9.003 u18CAA.003 u18CAB.003 u18CAC.003 u18CAD.003 u18CAE.003 u18CAF.003 u18CB0.003 u18CB1.003 u18CB2.003 u18CB3.003 u18CB4.003 u18CB5.003 u18CB6.003 u18CB7.003 u18CB8.003 u18CB9.003 u18CBA.003 u18CBB.003 u18CBC.003 u18CBD.003 u18CBE.003 u18CBF.003 u18CC0.003 u18CC1.003 u18CC2.003 u18CC3.003 u18CC4.003 u18CC5.003 u18CC6.003 u18CC7.003 u18CC8.003 u18CC9.003 u18CCA.003 u18CCB.003 u18CCC.003 u18CCD.003 u18CCE.003 u18CCF.003 u18CD0.003 u18CD1.003 u18CD2.003 u18CD3.003 u18CD4.003 u18CD5.003";
 name = CG_3;
-},
-{
-code = "a h m n";
-name = KernClass_a;
-},
-{
-code = "b o p";
-name = KernClass_b;
-},
-{
-code = "comma period";
-name = KernClass_comma;
-},
-{
-code = "c-e g o q";
-name = KernClass_c;
-},
-{
-code = "C G O Q";
-name = KernClass_C;
-},
-{
-code = "D O Q";
-name = KernClass_D;
 }
 );
 customParameters = (
@@ -2209,12 +2185,7 @@ lookup SingleSubstitution3 { # GSUB lookup type SingleSubstitution
 #
 # Feature definitions
 #
-
-@\\BASE = [space A-Z a-z u16FE4];
-
-table GDEF {
-    GlyphClassDef @BASE,,,;
-} GDEF;";
+";
 name = Prefix;
 }
 );
@@ -2236,145 +2207,6 @@ code = " # Discretionary Ligatures
     sub u18C37.003 u18BDF.001 u18C64.002 by u18C37_u18BDF_u18C64;
     sub u18C5B.003 u18CD1.001 by u18C5B_u18CD1;";
 tag = dlig;
-},
-{
-code = " # Kerning
-    lookupflag IgnoreMarks;
-    pos A v -60;
-    pos L v -20;
-    pos R v -10;
-    pos g W -20;
-    pos v A -60;
-    pos v period -70;
-    pos v comma -50;
-    pos period v -70;
-    pos comma v -70;
-    subtable;
-    pos A @KernClass_C -20;
-    pos A T -60;
-    pos A U -20;
-    pos A V -80;
-    pos A W -70;
-    pos A Y -70;
-    pos A @KernClass_c -20;
-    pos A u -20;
-    pos A w -30;
-    pos A y -50;
-    pos B A -20;
-    pos B T -20;
-    pos B V -40;
-    pos B W -30;
-    pos B X -20;
-    pos B Y -40;
-    pos B Z -20;
-    pos B w -10;
-    pos B y -20;
-    pos @KernClass_D A -20;
-    pos @KernClass_D T -20;
-    pos @KernClass_D V -20;
-    pos @KernClass_D W -20;
-    pos @KernClass_D X -20;
-    pos @KernClass_D Y -30;
-    pos @KernClass_D @KernClass_comma -20;
-    pos E V -20;
-    pos E W -20;
-    pos E Y -20;
-    pos F A -70;
-    pos F a -40;
-    pos F @KernClass_c -40;
-    pos F @KernClass_comma -120;
-    pos G T -20;
-    pos G V -20;
-    pos G W -20;
-    pos G Y -20;
-    pos K @KernClass_C -20;
-    pos K @KernClass_c -20;
-    pos K u -20;
-    pos K w -30;
-    pos K y -30;
-    pos L T -70;
-    pos L V -50;
-    pos L W -50;
-    pos L Y -60;
-    pos L w -10;
-    pos L y -30;
-    pos P A -50;
-    pos P @KernClass_comma -120;
-    pos R @KernClass_C -20;
-    pos R T -20;
-    pos R U -10;
-    pos R V -30;
-    pos R W -30;
-    pos R Y -30;
-    pos R w -10;
-    pos R y -20;
-    pos S A -20;
-    pos S T -20;
-    pos S V -20;
-    pos S W -20;
-    pos S X -20;
-    pos S Y -20;
-    pos S w -10;
-    pos S y -20;
-    pos T A -60;
-    pos T @KernClass_C -20;
-    pos T a -30;
-    pos T @KernClass_c -50;
-    pos T s -5;
-    pos T @KernClass_comma -90;
-    pos U A -20;
-    pos U @KernClass_comma -20;
-    pos V A -80;
-    pos V @KernClass_C -20;
-    pos V a -60;
-    pos V @KernClass_c -60;
-    pos V s -40;
-    pos V @KernClass_comma -110;
-    pos W A -70;
-    pos W @KernClass_C -20;
-    pos W a -70;
-    pos W @KernClass_c -60;
-    pos W s -50;
-    pos W z -30;
-    pos W @KernClass_comma -90;
-    pos X @KernClass_C -20;
-    pos X S -10;
-    pos X w -30;
-    pos X y -50;
-    pos Y A -70;
-    pos Y @KernClass_C -30;
-    pos Y S -20;
-    pos Y a -60;
-    pos Y @KernClass_c -70;
-    pos Y s -60;
-    pos Y z -20;
-    pos Y @KernClass_comma -80;
-    pos @KernClass_a y -20;
-    pos @KernClass_b V -60;
-    pos @KernClass_b W -60;
-    pos @KernClass_b Y -70;
-    pos @KernClass_b y -20;
-    pos e V -60;
-    pos e W -60;
-    pos e Y -60;
-    pos k @KernClass_c -20;
-    pos r a -20;
-    pos r @KernClass_comma -130;
-    pos s Y -60;
-    pos w A -30;
-    pos w @KernClass_comma -70;
-    pos y A -50;
-    pos y @KernClass_comma -90;
-    pos @KernClass_comma @KernClass_C -20;
-    pos @KernClass_comma T -90;
-    pos @KernClass_comma U -20;
-    pos @KernClass_comma V -110;
-    pos @KernClass_comma W -90;
-    pos @KernClass_comma Y -80;
-    pos @KernClass_comma w -60;
-    pos @KernClass_comma y -50;";
-disabled = 1;
-tag = kern;
 }
 );
 fontMaster = (
