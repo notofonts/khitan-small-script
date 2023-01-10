@@ -1,0 +1,8 @@
+googleFonts: true
+buildVariable: false
+sources:
+- NotoFangsongKSSRotated-Regular.glyphspackage
+familyName: Noto Fangsong Khitan Small Script Rotated
+includeSubsets:
+- from: Noto Serif
+  name: GF_Latin_Core

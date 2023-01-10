@@ -1,6 +1,8 @@
 googleFonts: true
+buildVariable: false
 sources:
-- NotoSerifTest.designspace
-axisOrder:
-  - wght
-familyName: Noto Serif Test
+- NotoSerifKhitanSmallScript-Regular.glyphspackage
+familyName: Noto Serif Khitan Small Script
+includeSubsets:
+- from: Noto Serif
+  name: GF_Latin_Core

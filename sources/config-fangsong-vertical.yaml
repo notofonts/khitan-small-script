@@ -1,0 +1,8 @@
+googleFonts: true
+buildVariable: false
+sources:
+- NotoFangsongKSSVertical-Regular.glyphspackage
+familyName: Noto Fangsong Khitan Small Script Vertical
+includeSubsets:
+- from: Noto Serif
+  name: GF_Latin_Core

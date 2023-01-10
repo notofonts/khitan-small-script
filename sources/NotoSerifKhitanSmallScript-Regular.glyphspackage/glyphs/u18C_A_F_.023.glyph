@@ -1,0 +1,14 @@
+{
+glyphname = u18CAF.023;
+layers = (
+{
+layerId = master01;
+shapes = (
+{
+ref = u18CAF;
+}
+);
+width = 2000;
+}
+);
+}

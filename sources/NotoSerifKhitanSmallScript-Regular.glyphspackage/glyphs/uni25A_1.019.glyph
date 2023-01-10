@@ -1,0 +1,15 @@
+{
+glyphname = uni25A1.019;
+layers = (
+{
+layerId = master01;
+shapes = (
+{
+pos = (-2000,-1500);
+ref = whitesquare;
+}
+);
+width = 0;
+}
+);
+}

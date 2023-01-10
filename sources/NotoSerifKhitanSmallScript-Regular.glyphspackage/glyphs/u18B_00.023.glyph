@@ -1,0 +1,14 @@
+{
+glyphname = u18B00.023;
+layers = (
+{
+layerId = master01;
+shapes = (
+{
+ref = u18B00;
+}
+);
+width = 2000;
+}
+);
+}
