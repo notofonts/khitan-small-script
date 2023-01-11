@@ -2322,7 +2322,7 @@ value = "版权所有2022谷歌有限责任公司。保留所有权利。";
 },
 {
 key = versionString;
-value = "Version 1.00;November 16, 2022;FontCreator 11.5.0.2427 64-bit";
+value = "Version 1.000;November 16, 2022;FontCreator 11.5.0.2427 64-bit";
 },
 {
 key = vendorID;
