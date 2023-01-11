@@ -13,6 +13,12 @@
 [Shaping]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnotofonts%2Fkhitan-small-script%2Fgh-pages%2Fbadges%2FShapingChecks.json
 [Universal]: https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnotofonts%2Fkhitan-small-script%2Fgh-pages%2Fbadges%2FUniversal.json
 
+## Design
+
+Noto Khitan Small Script is designed based on the purpose of text use, using a more writing-oriented FangSong style font, easy to read and more compatible with the typeface of the text.
+
+The font is designed by LIU Zhao and ZHANG Congyu, and the OpenType layout is designed by Kushim JIANG.
+
 ## Building
 
 Fonts are built automatically by GitHub Actions - take a look in the "Actions" tab for the latest build.
