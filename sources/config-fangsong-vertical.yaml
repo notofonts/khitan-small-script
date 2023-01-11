@@ -1,4 +1,4 @@
-googleFonts: true
+googleFonts: false
 buildVariable: false
 sources:
 - NotoFangsongKSSVertical-Regular.glyphspackage
