@@ -2330,7 +2330,7 @@ value = GOOG;
 },
 {
 key = uniqueID;
-value = "Noto Fangsong KSS Vertical:Version 1.00";
+value = "Noto Fangsong KSS Vertical:Version 1.000";
 },
 {
 key = licenses;
