@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Fontbakery Check Report</title>
+                        <style>
+                            
+            html {
+                font-family: sans-serif;
+            }
+
+            h2 {
+                margin-top: 2em;
+            }
+
+            h3 {
+                margin-bottom: 1px;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 0.5em
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            tr {
+                text-align: left;
+            }
+
+            ul {
+                margin-top: 0;
+            }
+
+            .details_item {
+                list-style: none;
+                display: flex;
+                align-items: baseline;
+            }
+
+            .details_indicator {
+                flex: 0 0 5em;
+                font-weight: bold;
+                padding-right: 0.5em;
+                text-align: right;
+            }
+
+            .details_text {
+                flex: 1 0;
+            }
+            
+                        </style>
+                    </head>
+                    <body>
+                    <h1>Fontbakery Technical Report</h1>
+<div>If you think a check is flawed or have an idea for a check, please  file an issue at <a href='https://github.com/googlefonts/fontbakery/issues'>https://github.com/googlefonts/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</div>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>10</td>
+                <td>117</td>
+                <td>7</td>
+                <td>98</td>
+            </tr>
+            <tr>
+                <td>0%</td>
+                <td>1%</td>
+                <td>6%</td>
+                <td>67%</td>
+                <td>4%</td>
+                <td>56%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+<h2>&lt;Section: Google Fonts&gt; 🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️</h2>
+<h3>Combined length of family and style must not exceed 27 characters.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/family_and_style_max_length&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSVertical/googlefonts/ttf/NotoFangsongKSSVertical-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Noto Fangsong KSS Vertical' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<h3>Check font follows the Google Fonts CJK vertical metric schema</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_vertical_metrics&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSVertical/googlefonts/ttf/NotoFangsongKSSVertical-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>We recommend the absolute sum of the hhea metrics should be between 1.1-1.4x of the font's upm. This font has 2.0x [code: bad-hhea-range]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain less than 40 CJK characters?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_not_enough_glyphs&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSVertical/googlefonts/ttf/NotoFangsongKSSVertical-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>There are only 9 CJK glyphs when there needs to be at least 40 in order to support the smallest CJK writing system, Hangul.
+The following CJK glyphs were found:
+['uni4E39', 'uni4EFF', 'uni4F53', 'uni5951', 'uni5B57', 'uni5B8B', 'uni5C0F', 'uni6B4C', 'uni8C37']
+Please check that these glyphs have the correct unicodes. [code: cjk-not-enough-glyphs]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSVertical/googlefonts/ttf/NotoFangsongKSSVertical-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h3>Noto fonts must have an ARTICLE.en_us.html file</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/description/noto_has_article&gt;</div>
+
+<details><summary>🔥 <strong>fonts/NotoFangsongKSSVertical/googlefonts/ttf/NotoFangsongKSSVertical-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]</p>
+</span></li></ul></div></details>
+<h2>&lt;Section: Universal&gt; ⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️</h2>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSVertical/googlefonts/ttf/NotoFangsongKSSVertical-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: Uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2 
+
+- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Does the font contain chws and vchw features?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/cjk_chws_feature&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSVertical/googlefonts/ttf/NotoFangsongKSSVertical-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>chws feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-chws-feature]</p>
+</span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>vchw feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-vchw-feature]</p>
+</span></li></ul></div></details>
+<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSVertical/googlefonts/ttf/NotoFangsongKSSVertical-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+</span></li></ul></div></details>
+<h2>&lt;Section: Outline Correctness Checks&gt; ⚠️⚠️⚠️</h2>
+<h3>Do any segments have colinear vectors?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_colinear_vectors&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSVertical/googlefonts/ttf/NotoFangsongKSSVertical-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have colinear vectors:</p>
+<pre><code>* u18B07 (U+18B07): L&lt;&lt;358.0,-3.0&gt;--&lt;429.0,-32.0&gt;&gt; -&gt; L&lt;&lt;429.0,-32.0&gt;--&lt;474.0,-48.0&gt;&gt;
+
+* u18B07 (U+18B07): L&lt;&lt;496.0,597.0&gt;--&lt;496.0,608.0&gt;&gt; -&gt; L&lt;&lt;496.0,608.0&gt;--&lt;496.0,613.0&gt;&gt;
+
+* u18B07 (U+18B07): L&lt;&lt;497.0,338.0&gt;--&lt;496.0,597.0&gt;&gt; -&gt; L&lt;&lt;496.0,597.0&gt;--&lt;496.0,608.0&gt;&gt;
+
+* u18B38 (U+18B38): L&lt;&lt;490.0,-32.0&gt;--&lt;490.0,28.0&gt;&gt; -&gt; L&lt;&lt;490.0,28.0&gt;--&lt;491.0,344.0&gt;&gt;
+
+* u18B39 (U+18B39): L&lt;&lt;470.0,-49.0&gt;--&lt;470.0,28.0&gt;&gt; -&gt; L&lt;&lt;470.0,28.0&gt;--&lt;471.0,344.0&gt;&gt;
+
+* u18B3E (U+18B3E): L&lt;&lt;190.0,-2.0&gt;--&lt;191.0,131.0&gt;&gt; -&gt; L&lt;&lt;191.0,131.0&gt;--&lt;190.0,262.0&gt;&gt;
+
+* u18B41 (U+18B41): L&lt;&lt;719.0,396.0&gt;--&lt;605.0,384.0&gt;&gt; -&gt; L&lt;&lt;605.0,384.0&gt;--&lt;533.0,376.0&gt;&gt;
+
+* u18B57 (U+18B57): L&lt;&lt;419.0,93.0&gt;--&lt;394.0,70.0&gt;&gt; -&gt; L&lt;&lt;394.0,70.0&gt;--&lt;369.0,46.0&gt;&gt;
+
+* u18B5A (U+18B5A): L&lt;&lt;253.0,335.0&gt;--&lt;444.0,347.0&gt;&gt; -&gt; L&lt;&lt;444.0,347.0&gt;--&lt;448.0,347.0&gt;&gt;
+
+* u18B60 (U+18B60): L&lt;&lt;846.0,402.0&gt;--&lt;668.0,392.0&gt;&gt; -&gt; L&lt;&lt;668.0,392.0&gt;--&lt;600.0,388.0&gt;&gt; 
+
+* And 80 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-colinear-vectors]</p>
+</span></li></ul></div></details>
+<h3>Do outlines contain any jaggy segments?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_jaggy_segments&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSVertical/googlefonts/ttf/NotoFangsongKSSVertical-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* u18B10 (U+18B10): B&lt;&lt;780.0,481.0&gt;-&lt;741.0,439.0&gt;-&lt;742.0,440.0&gt;&gt;/B&lt;&lt;742.0,440.0&gt;-&lt;708.0,407.0&gt;-&lt;673.5,378.5&gt;&gt; = 0.8550973962662667
+
+* u18B3C (U+18B3C): B&lt;&lt;209.0,307.0&gt;-&lt;250.0,266.0&gt;-&lt;294.0,237.0&gt;&gt;/B&lt;&lt;294.0,237.0&gt;-&lt;293.0,238.0&gt;-&lt;420.0,152.0&gt;&gt; = 11.611486423888481
+
+* u18B81 (U+18B81): B&lt;&lt;838.0,326.0&gt;-&lt;799.0,284.0&gt;-&lt;800.0,285.0&gt;&gt;/B&lt;&lt;800.0,285.0&gt;-&lt;716.0,203.0&gt;-&lt;644.0,155.0&gt;&gt; = 0.6902771978645523
+
+* u18BB1 (U+18BB1): B&lt;&lt;455.0,362.0&gt;-&lt;431.0,360.0&gt;-&lt;435.0,360.0&gt;&gt;/B&lt;&lt;435.0,360.0&gt;-&lt;380.0,355.0&gt;-&lt;313.0,341.0&gt;&gt; = 5.1944289077348
+
+* u18BEA (U+18BEA): B&lt;&lt;598.0,608.0&gt;-&lt;508.0,600.0&gt;-&lt;524.0,601.0&gt;&gt;/B&lt;&lt;524.0,601.0&gt;-&lt;390.0,588.0&gt;-&lt;347.0,583.0&gt;&gt; = 1.9648704030421524
+
+* u18BEB (U+18BEB): B&lt;&lt;599.0,608.0&gt;-&lt;502.0,600.0&gt;-&lt;522.0,601.0&gt;&gt;/B&lt;&lt;522.0,601.0&gt;-&lt;493.0,598.0&gt;-&lt;427.0,592.0&gt;&gt; = 3.0437358876587015
+
+* u18C0A (U+18C0A): B&lt;&lt;899.0,514.0&gt;-&lt;801.0,505.0&gt;-&lt;807.0,506.0&gt;&gt;/B&lt;&lt;807.0,506.0&gt;-&lt;688.0,496.0&gt;-&lt;578.0,485.0&gt;&gt; = 4.6588364489565155
+
+* u18C0B (U+18C0B): B&lt;&lt;859.0,514.0&gt;-&lt;761.0,505.0&gt;-&lt;767.0,506.0&gt;&gt;/B&lt;&lt;767.0,506.0&gt;-&lt;641.0,496.0&gt;-&lt;524.0,484.0&gt;&gt; = 4.924549700118923
+
+* u18C65 (U+18C65): B&lt;&lt;773.0,592.0&gt;-&lt;755.0,571.0&gt;-&lt;757.0,573.0&gt;&gt;/B&lt;&lt;757.0,573.0&gt;-&lt;706.0,512.0&gt;-&lt;660.0,464.0&gt;&gt; = 5.102165252358147
+
+* u18CB2 (U+18CB2): B&lt;&lt;371.0,355.0&gt;-&lt;458.0,365.0&gt;-&lt;453.0,364.0&gt;&gt;/B&lt;&lt;453.0,364.0&gt;-&lt;478.0,367.0&gt;-&lt;492.5,375.0&gt;&gt; = 4.46715906138917 
+
+* And u18CB3 (U+18CB3): B&lt;&lt;377.0,617.0&gt;-&lt;328.0,611.0&gt;-&lt;333.0,612.0&gt;&gt;/B&lt;&lt;333.0,612.0&gt;-&lt;303.0,610.0&gt;-&lt;254.0,602.0&gt;&gt; = 7.495857639729836 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Do outlines contain any semi-vertical or semi-horizontal lines?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_semi_vertical&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSVertical/googlefonts/ttf/NotoFangsongKSSVertical-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* u18B03 (U+18B03): L&lt;&lt;531.0,182.0&gt;--&lt;530.0,-136.0&gt;&gt;
+
+* u18B07 (U+18B07): L&lt;&lt;497.0,338.0&gt;--&lt;496.0,597.0&gt;&gt;
+
+* u18B0B (U+18B0B): L&lt;&lt;527.0,175.0&gt;--&lt;526.0,-149.0&gt;&gt;
+
+* u18B14 (U+18B14): L&lt;&lt;551.0,485.0&gt;--&lt;550.0,168.0&gt;&gt;
+
+* u18B15 (U+18B15): L&lt;&lt;531.0,485.0&gt;--&lt;530.0,168.0&gt;&gt;
+
+* u18B17 (U+18B17): L&lt;&lt;545.0,378.0&gt;--&lt;544.0,175.0&gt;&gt;
+
+* u18B18 (U+18B18): L&lt;&lt;535.0,391.0&gt;--&lt;534.0,224.0&gt;&gt;
+
+* u18B19 (U+18B19): L&lt;&lt;534.0,426.0&gt;--&lt;533.0,303.0&gt;&gt;
+
+* u18B1E (U+18B1E): L&lt;&lt;529.0,154.0&gt;--&lt;528.0,-113.0&gt;&gt;
+
+* u18B1F (U+18B1F): L&lt;&lt;827.0,128.0&gt;--&lt;826.0,-148.0&gt;&gt; 
+
+* And 81 more.
+</code></pre>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-semi-vertical]</p>
+</span></li></ul></div></details>
+                    </body>
+                </html>
