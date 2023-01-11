@@ -1,7 +1,7 @@
 googleFonts: true
 buildVariable: false
 sources:
-- NotoSerifKhitanSmallScript-Regular.glyphspackage
+- NotoSerifKhitanSmallScript.glyphspackage
 familyName: Noto Serif Khitan Small Script
 includeSubsets:
 - from: Noto Serif

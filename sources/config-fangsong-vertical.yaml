@@ -1,8 +1,8 @@
 googleFonts: false
 buildVariable: false
 sources:
-- NotoFangsongKSSVertical-Regular.glyphspackage
-familyName: Noto Fangsong Khitan Small Script Vertical
+- NotoFangsongKSSVertical.glyphspackage
+familyName: Noto Fangsong KSS Vertical
 includeSubsets:
 - from: Noto Serif
   name: GF_Latin_Core
