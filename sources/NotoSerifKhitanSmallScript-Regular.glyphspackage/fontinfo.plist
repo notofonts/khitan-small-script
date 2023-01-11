@@ -11544,28 +11544,8 @@ name = openTypeHheaCaretSlopeRun;
 value = 0;
 },
 {
-name = descriptions;
-value = "The typeface is designed based on the purpose of text use, using a more writing-oriented FangSong style font, easy to read and more compatible with the typeface of the text.\012The font is designed by LIU Zhao and ZHANG Congyu, and the OpenType layout is designed by Kushim JIANG.";
-},
-{
-name = licenses;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
-},
-{
-name = licenseURL;
-value = "http://scripts.sil.org/OFL";
-},
-{
-name = preferredFamilyName;
-value = "Noto Serif Khitan Small Script";
-},
-{
 name = sampleTexts;
 value = "𘲇 𘮝 𘱚𘮒𘲦 𘭅𘭂𘬐 𘮉 𘬞𘱞 𘬓𘰫 𘱚𘮰 𘱄𘱹𘲚 𘬥𘯺𘭗 𘲽𘲑 𘯴𘰷 𘲅𘯺𘬐 𘱆 𘭕𘰕 𘱄𘭏 𘬥𘯺𘬐 𘲱𘱶𘱤 𘲜𘮢𘲫 𘰷𘰗𘱤";
-},
-{
-name = uniqueID;
-value = "Noto Serif Khitan Small Script:Version 1.00";
 },
 {
 name = codePageRanges;
@@ -11646,10 +11626,6 @@ value = (
 0,
 57
 );
-},
-{
-name = vendorID;
-value = GOOG;
 },
 {
 name = trademarks;
@@ -11743,15 +11719,15 @@ fontMaster = (
 customParameters = (
 {
 name = typoAscender;
-value = 800;
+value = 880;
 },
 {
 name = typoDescender;
-value = -200;
+value = -120;
 },
 {
 name = typoLineGap;
-value = 200;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -11895,7 +11871,7 @@ key = licenses;
 values = (
 {
 language = dflt;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
 }
 );
 },
@@ -11909,16 +11885,6 @@ values = (
 {
 language = dflt;
 value = "Noto is a trademark of Google Inc.";
-}
-);
-},
-{
-key = descriptions;
-values = (
-{
-language = dflt;
-value = "The typeface is designed based on the purpose of text use, using a more writing-oriented FangSong style font, easy to read and more compatible with the typeface of the text.
-The font is designed by LIU Zhao and ZHANG Congyu, and the OpenType layout is designed by Kushim JIANG.";
 }
 );
 },
