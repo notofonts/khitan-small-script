@@ -2,79 +2,14 @@
 
 Fontbakery version: 0.8.11a8
 
-<details><summary><b>[17] NotoSerifKhitanSmallScript-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Name table entries should not contain line-breaks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/line_breaks">com.google.fonts/check/name/line_breaks</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name entry DESCRIPTION on platform WINDOWS contains a line-break. [code: line-break]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check font follows the Google Fonts CJK vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/cjk_vertical_metrics">com.google.fonts/check/cjk_vertical_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.sTypoAscender is "800" it should be 880 [code: bad-OS/2.sTypoAscender]
-* 🔥 **FAIL** OS/2.sTypoDescender is "-200" it should be -120 [code: bad-OS/2.sTypoDescender]
-* 🔥 **FAIL** OS/2.sTypoLineGap is "200" it should be 0 [code: bad-OS/2.sTypoLineGap]
-* ⚠ **WARN** We recommend the absolute sum of the hhea metrics should be between 1.1-1.4x of the font's upm. This font has 4.0x [code: bad-hhea-range]
-</div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
+<details><summary><b>[12] NotoSerifKhitanSmallScript-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
 * 🔥 **FAIL** This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]
-</div></details><details><summary>🔥 <b>FAIL:</b> Space and non-breaking space have the same width? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_widths">com.google.fonts/check/whitespace_widths</a>)</summary><div>
+</div></details><details><summary>⚠ <b>WARN:</b> License URL matches License text on name table? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license_url">com.google.fonts/check/name/license_url</a>)</summary><div>
 
 
-* 🔥 **FAIL** Space and non-breaking space have differing width: The space glyph named space is 600 font units wide, non-breaking space named (uni00A0) is 260 font units wide, and both should be positive and the same. GlyphsApp has "Sidebearing arithmetic" (https://glyphsapp.com/tutorials/spacing) which allows you to set the non-breaking space width to always equal the space width. [code: different-widths]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check that texts shape as per expectation (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Shaping Checks>.html#com.google.fonts/check/shaping/regression">com.google.fonts/check/shaping/regression</a>)</summary><div>
-
-
-* 🔥 **FAIL** qa/shaping_tests/example.json: Expected and actual shaping not matching
-<div class="shaping">
-
-
-<style type="text/css">
-    @font-face {font-family: "TestFont"; src: url(../../fonts/NotoSerifKhitanSmallScript-Regular/googlefonts/ttf/NotoSerifKhitanSmallScript-Regular.ttf);}
-    .tf { font-family: "TestFont"; }
-    .shaping pre { font-size: 1.2rem; }
-    .shaping li {
-        font-size: 1.2rem;
-        border-top: 1px solid #ddd;
-        padding: 12px;
-        margin-top: 12px;
-    }
-    .shaping-svg {
-        height: 100px;
-        margin: 10px;
-        transform: matrix(1, 0, 0, -1, 0, 0);
-    }
-</style>
-
-<h4>qa/shaping_tests/example.json: Expected and actual shaping not matching</h4>
-
-
-</div>
-<div class="shaping">
-
-<li>Shaping did not match: <span class="tf">๰</span></li>
-
-
-<pre>Expected: None</pre>
-
-
-
-<pre>Got     : .notdef=0+500</pre>
-
-
-Got: <svg class="shaping-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 5000" transform="matrix(1 0 0 -1 0 0)">
-<path d="M410.0,-200.0L93.0,-200.0L93.0,800.0L410.0,800.0L410.0,-200.0ZM267.0,663.0L267.0,700.0L333.0,700.0L333.0,733.0L168.0,733.0L168.0,700.0L233.0,700.0L233.0,663.0L167.0,663.0L167.0,630.0L333.0,630.0L333.0,663.0L267.0,663.0ZM333.0,500.0L333.0,534.0L267.0,534.0L267.0,604.0L167.0,604.0L167.0,500.0L333.0,500.0ZM233.0,534.0L200.0,534.0L200.0,570.0L233.0,570.0L233.0,534.0ZM267.0,370.0L267.0,440.0L333.0,440.0L333.0,473.0L167.0,473.0L167.0,440.0L233.0,440.0L233.0,403.0L167.0,403.0L167.0,370.0L267.0,370.0ZM167.0,347.0L167.0,313.0L333.0,313.0L333.0,413.0L300.0,413.0L300.0,347.0L167.0,347.0ZM167.0,291.0L167.0,178.0L333.0,178.0L333.0,291.0L233.0,291.0L233.0,235.0L267.0,235.0L267.0,258.0L300.0,258.0L300.0,211.0L200.0,211.0L200.0,291.0L167.0,291.0ZM167.0,118.0L167.0,5.0L333.0,5.0L333.0,118.0L167.0,118.0ZM300.0,38.0L200.0,38.0L200.0,85.0L300.0,85.0L300.0,38.0ZM231.0,-98.0L301.0,-51.0L333.0,-51.0L333.0,-18.0L167.0,-18.0L167.0,-51.0L237.0,-51.0L167.0,-98.0L167.0,-131.0L333.0,-131.0L333.0,-98.0L231.0,-98.0Z"  transform="translate(0, 2200)"/>
-</svg>
-
-
-</div> [code: shaping-regression]
-</div></details><details><summary>⚠ <b>WARN:</b> Description strings in the name table must not exceed 200 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/description_max_length">com.google.fonts/check/name/description_max_length</a>)</summary><div>
-
-
-* ⚠ **WARN** A few name table entries with ID=10 (NameID.DESCRIPTION) are longer than 200 characters. Please check whether those entries are copyright notices mistakenly stored in the description string entries by a bug in an old FontLab version. If that's the case, then such copyright notices must be removed from these entries. [code: too-long]
+* ⚠ **WARN** Please consider using HTTPS URLs at name table entry [plat=3, enc=1, name=14] [code: http-in-license-info]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -82,6 +17,10 @@ Got: <svg class="shaping-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50
  FONT_FAMILY_NAME = 'Noto Serif Khitan Small Script' / SUBFAMILY_NAME = 'Regular'
 
 Please take a look at the conversation at https://github.com/googlefonts/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]
+</div></details><details><summary>⚠ <b>WARN:</b> Check font follows the Google Fonts CJK vertical metric schema (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/cjk_vertical_metrics">com.google.fonts/check/cjk_vertical_metrics</a>)</summary><div>
+
+
+* ⚠ **WARN** We recommend the absolute sum of the hhea metrics should be between 1.1-1.4x of the font's upm. This font has 4.0x [code: bad-hhea-range]
 </div></details><details><summary>⚠ <b>WARN:</b> Does the font contain less than 40 CJK characters? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/cjk_not_enough_glyphs">com.google.fonts/check/cjk_not_enough_glyphs</a>)</summary><div>
 
 
@@ -121,10 +60,6 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** No dotted circle glyph present [code: missing-dotted-circle]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking Vertical Metric Linegaps. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/hhea.html#com.google.fonts/check/linegaps">com.google.fonts/check/linegaps</a>)</summary><div>
-
-
-* ⚠ **WARN** OS/2 sTypoLineGap is not equal to 0. [code: OS/2]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
 
 
@@ -213,8 +148,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-semi-ve
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 6 | 11 | 117 | 7 | 92 | 0 |
-| 0% | 3% | 5% | 50% | 3% | 39% | 0% |
+| 0 | 1 | 11 | 117 | 7 | 97 | 0 |
+| 0% | 0% | 5% | 50% | 3% | 42% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
