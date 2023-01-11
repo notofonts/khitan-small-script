@@ -2017,34 +2017,6 @@ name = openTypeHheaCaretSlopeRun;
 value = 0;
 },
 {
-name = descriptions;
-value = "The typeface is designed based on the purpose of text use, using a more writing-oriented FangSong style font, easy to read and more compatible with the typeface of the text.\012The font is designed by LIU Zhao and ZHANG Congyu, and the OpenType layout is designed by Kushim JIANG.\012";
-},
-{
-name = licenses;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
-},
-{
-name = licenseURL;
-value = "http://scripts.sil.org/OFL";
-},
-{
-name = preferredFamilyName;
-value = "Noto Fangsong KSS Vertical";
-},
-{
-name = sampleTexts;
-value = "𘲇 𘮝 𘱚𘮒𘲦 𘭅𘭂𘬐 𘮉 𘬞𘱞 𘬓𘰫 𘱚𘮰 𘱄𘱹𘲚 𘬥𘯺𘭗 𘲽𘲑 𘯴𘰷 𘲅𘯺𘬐 𘱆 𘭕𘰕 𘱄𘭏 𘬥𘯺𘬐 𘲱𘱶𘱤 𘲜𘮢𘲫 𘰷𘰗𘱤";
-},
-{
-name = uniqueID;
-value = "Noto Fangsong KSS Vertical:Version 1.00";
-},
-{
-name = versionString;
-value = "Version 1.00;November 16, 2022;FontCreator 11.5.0.2427 64-bit";
-},
-{
 name = codePageRanges;
 value = (
 "936",
@@ -2123,14 +2095,6 @@ value = (
 0,
 57
 );
-},
-{
-name = vendorID;
-value = GOOG;
-},
-{
-name = trademarks;
-value = "Noto is a trademark of Google Inc.";
 }
 );
 date = "2022-04-17 11:15:57 +0000";
@@ -2210,15 +2174,15 @@ fontMaster = (
 customParameters = (
 {
 name = typoAscender;
-value = 800;
+value = 880;
 },
 {
 name = typoDescender;
-value = -200;
+value = -120;
 },
 {
 name = typoLineGap;
-value = 200;
+value = 0;
 },
 {
 name = hheaAscender;
@@ -2373,13 +2337,13 @@ key = licenses;
 values = (
 {
 language = dflt;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
 }
 );
 },
 {
 key = licenseURL;
-value = "http://scripts.sil.org/OFL";
+value = "https://scripts.sil.org/OFL";
 },
 {
 key = trademarks;
@@ -2395,31 +2359,10 @@ value = "Noto是谷歌公司的一个商标。";
 );
 },
 {
-key = descriptions;
-values = (
-{
-language = dflt;
-value = "The typeface is designed based on the purpose of text use, using a more writing-oriented FangSong style font, easy to read and more compatible with the typeface of the text.
-The font is designed by LIU Zhao and ZHANG Congyu, and the OpenType layout is designed by Kushim JIANG.
-";
-},
-{
-language = ZHS;
-value = "本字体基于正文使用为目的进行设计，采用更偏重书写风格的仿宋字体，便于阅读并与正文的字体风格更加匹配。
-本字体由刘钊与张丛馀设计，OpenType特性由姜兆勤编写。
-";
-}
-);
-},
-{
 key = sampleTexts;
 values = (
 {
 language = dflt;
-value = "𘲇 𘮝 𘱚𘮒𘲦 𘭅𘭂𘬐 𘮉 𘬞𘱞 𘬓𘰫 𘱚𘮰 𘱄𘱹𘲚 𘬥𘯺𘭗 𘲽𘲑 𘯴𘰷 𘲅𘯺𘬐 𘱆 𘭕𘰕 𘱄𘭏 𘬥𘯺𘬐 𘲱𘱶𘱤 𘲜𘮢𘲫 𘰷𘰗𘱤";
-},
-{
-language = ZHS;
 value = "𘲇 𘮝 𘱚𘮒𘲦 𘭅𘭂𘬐 𘮉 𘬞𘱞 𘬓𘰫 𘱚𘮰 𘱄𘱹𘲚 𘬥𘯺𘭗 𘲽𘲑 𘯴𘰷 𘲅𘯺𘬐 𘱆 𘭕𘰕 𘱄𘭏 𘬥𘯺𘬐 𘲱𘱶𘱤 𘲜𘮢𘲫 𘰷𘰗𘱤";
 }
 );
