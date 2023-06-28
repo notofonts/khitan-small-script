@@ -73,11 +73,11 @@
             </tr>
             <tr>
                 <td>0</td>
-                <td>1</td>
-                <td>10</td>
-                <td>117</td>
+                <td>2</td>
+                <td>11</td>
+                <td>122</td>
                 <td>7</td>
-                <td>98</td>
+                <td>104</td>
             </tr>
             <tr>
                 <td>0%</td>
@@ -85,7 +85,7 @@
                 <td>6%</td>
                 <td>67%</td>
                 <td>4%</td>
-                <td>56%</td>
+                <td>57%</td>
             </tr>
             </table>
             
@@ -121,7 +121,7 @@ Please check that these glyphs have the correct unicodes. [code: cjk-not-enough-
 
 <details><summary>🔥 <strong>fonts/NotoFangsongKSSRotated/googlefonts/ttf/NotoFangsongKSSRotated-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]</p>
 </span></li></ul></div></details>
-<h2>&lt;Section: Universal&gt; ⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️</h2>
+<h2>&lt;Section: Universal&gt; 🔥⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️</h2>
 <h3>Check if each glyph has the recommended amount of contours.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
 
@@ -137,7 +137,7 @@ Please check that these glyphs have the correct unicodes. [code: cjk-not-enough-
 
 - Glyph name: aogonek	Contours detected: 3	Expected: 2 
 
-- And Glyph name: uogonek	Contours detected: 2	Expected: 1
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
 </code></pre>
 <p>[code: contour-count]</p>
 </span></li></ul></div></details>
@@ -147,10 +147,28 @@ Please check that these glyphs have the correct unicodes. [code: cjk-not-enough-
 <details><summary>⚠️ <strong>fonts/NotoFangsongKSSRotated/googlefonts/ttf/NotoFangsongKSSRotated-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>chws feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-chws-feature]</p>
 </span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>vchw feature not found in font. Use chws_tool (https://github.com/googlefonts/chws_tool) to add it. [code: missing-vchw-feature]</p>
 </span></li></ul></div></details>
-<h3>Ensure dotted circle glyph is present and can attach marks.</h3>
-<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/soft_dotted&gt;</div>
 
-<details><summary>⚠️ <strong>fonts/NotoFangsongKSSRotated/googlefonts/ttf/NotoFangsongKSSRotated-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+<details><summary>🔥 <strong>fonts/NotoFangsongKSSRotated/googlefonts/ttf/NotoFangsongKSSRotated-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies must disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
+<p>The dot of soft dotted characters should disappear in other cases, for example: ĩ̦ ĭ̦ i̦̇ i̦̊ i̦̋ ǐ̦ i̦̒ ĩ̧ ĭ̧ i̧̇ i̧̊ i̧̋ ǐ̧ i̧̒ j̦̀ j̦́ ĵ̦ j̦̃ j̦̄ j̦̆ [code: soft-dotted]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/math_signs_width&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSRotated/googlefonts/ttf/NotoFangsongKSSRotated-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 559 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 310:
+minus
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h2>&lt;Section: fontbakery.profiles.gdef&gt; ⚠️</h2>
+<h3>Check mark characters are in GDEF mark glyph class.</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/gdef_mark_chars&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoFangsongKSSRotated/googlefonts/ttf/NotoFangsongKSSRotated-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), u16FE4 (U+16FE4), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A) and 6 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]</p>
 </span></li></ul></div></details>
 <h2>&lt;Section: Outline Correctness Checks&gt; ⚠️⚠️⚠️</h2>
 <h3>Do any segments have colinear vectors?</h3>
@@ -177,7 +195,7 @@ Please check that these glyphs have the correct unicodes. [code: cjk-not-enough-
 
 * u18B60 (U+18B60): L&lt;&lt;846.0,402.0&gt;--&lt;668.0,392.0&gt;&gt; -&gt; L&lt;&lt;668.0,392.0&gt;--&lt;600.0,388.0&gt;&gt; 
 
-* And 80 more.
+* 80 more.
 </code></pre>
 <p>Use -F or --full-lists to disable shortening of long lists. [code: found-colinear-vectors]</p>
 </span></li></ul></div></details>
@@ -205,7 +223,7 @@ Please check that these glyphs have the correct unicodes. [code: cjk-not-enough-
 
 * u18CB2 (U+18CB2): B&lt;&lt;371.0,355.0&gt;-&lt;458.0,365.0&gt;-&lt;453.0,364.0&gt;&gt;/B&lt;&lt;453.0,364.0&gt;-&lt;478.0,367.0&gt;-&lt;492.5,375.0&gt;&gt; = 4.46715906138917 
 
-* And u18CB3 (U+18CB3): B&lt;&lt;377.0,617.0&gt;-&lt;328.0,611.0&gt;-&lt;333.0,612.0&gt;&gt;/B&lt;&lt;333.0,612.0&gt;-&lt;303.0,610.0&gt;-&lt;254.0,602.0&gt;&gt; = 7.495857639729836 [code: found-jaggy-segments]
+* u18CB3 (U+18CB3): B&lt;&lt;377.0,617.0&gt;-&lt;328.0,611.0&gt;-&lt;333.0,612.0&gt;&gt;/B&lt;&lt;333.0,612.0&gt;-&lt;303.0,610.0&gt;-&lt;254.0,602.0&gt;&gt; = 7.495857639729836 [code: found-jaggy-segments]
 </code></pre>
 </span></li></ul></div></details>
 <h3>Do outlines contain any semi-vertical or semi-horizontal lines?</h3>
@@ -232,7 +250,7 @@ Please check that these glyphs have the correct unicodes. [code: cjk-not-enough-
 
 * u18B1F (U+18B1F): L&lt;&lt;827.0,128.0&gt;--&lt;826.0,-148.0&gt;&gt; 
 
-* And 81 more.
+* 81 more.
 </code></pre>
 <p>Use -F or --full-lists to disable shortening of long lists. [code: found-semi-vertical]</p>
 </span></li></ul></div></details>
