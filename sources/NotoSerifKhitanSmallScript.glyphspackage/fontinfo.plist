@@ -1,5 +1,5 @@
 {
-.appVersion = "3149";
+.appVersion = "3202";
 .formatVersion = 3;
 classes = (
 {
@@ -11642,7 +11642,12 @@ code = "languagesystem DFLT dflt;
 name = Languagesystems;
 },
 {
-code = "lookup SingleSubstitution14 {
+code = "table GDEF {
+	# Override harfbuzz default
+	GlyphClassDef [u16FE4], [], [], [];
+} GDEF;
+
+lookup SingleSubstitution14 {
 	sub @CG_00 by @CG_11;
     sub u16FE4 by kssf;
 } SingleSubstitution14;
@@ -11678,7 +11683,8 @@ features = (
 code = " # Required Contextual Alternates
     lookup ChainingContext01 { # GSUB lookup type ChainingContext
         sub @CG_00' by @CG_11;
-        sub u16FE4' by kssf;
+        sub @CG_00 u16FE4' by kssf;
+        sub u16FE4' @CG_00 by kssf;
     } ChainingContext01;
 
     lookup ChainingContext02 { # GSUB lookup type ChainingContext
