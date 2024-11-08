@@ -1,8 +1,9 @@
-googleFonts: false
 buildVariable: false
-sources:
-- NotoFangsongKSSRotated.glyphspackage
 familyName: Noto Fangsong KSS Rotated
+googleFonts: false
 includeSubsets:
 - from: Noto Serif
   name: GF_Latin_Core
+recipeProvider: noto
+sources:
+- NotoFangsongKSSRotated.glyphspackage
