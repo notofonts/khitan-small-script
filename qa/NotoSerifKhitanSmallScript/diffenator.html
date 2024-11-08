@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Diffenator3</title>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+		crossorigin="anonymous"></script>
+	<style type="text/css">
+		@font-face {
+      font-family: "Font Before";
+      src: url();
+    }
+
+    @font-face {
+      font-family: "Font After";
+      src: url();
+    }
+
+    .font-before, .font-after {
+      font-variation-settings: "wght" 400, "wdth" 100;
+    }
+
+    .font-before {
+      font-family: "Font Before", "Adobe Notdef";
+    }
+
+    .font-after {
+      font-family: "Font After", "Adobe Notdef";
+    }
+
+	:root {
+	--node-pt-size: 40px;
+	}
+
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #b3d4f5 !important;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
+    background-color: #ced9e4 !important;
+}
+.nav-item {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 2px;
+}
+
+.nav-pills .nav-link{
+    background-color: #9fcaf5 !important;
+}
+h4 {
+    color: #6f7882 !important;
+}
+
+@font-face {
+    font-family: "Adobe NotDef";
+    src: url(https://cdn.jsdelivr.net/gh/adobe-fonts/adobe-notdef/AND-Regular.ttf);
+}
+
+.box-title {
+    width: 100%;
+    font-size: 8pt;
+    font-weight: 700;
+    border-top: 1px solid black;
+    padding-top: 5px;
+    margin-bottom: 10pt;
+    display: block;
+}
+
+.box {
+    margin-bottom: 20pt;
+    width: 100%;
+    float: left;
+}
+
+.box-text {}
+
+#ui-nav {
+    position: fixed;
+    right: 20px;
+    z-index: 100;
+}
+
+#font-toggle {}
+
+.ui-nav-item {
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+    text-align: center;
+    color: white;
+    background-color: black;
+    display: block;
+    font-size: 14pt;
+    padding: 5px;
+    margin: 2px;
+}
+
+/* Stuff needed for the table differ */
+body {
+    font-family: Helvetica;
+}
+
+.node {
+    font-family: courier;
+    cursor: pointer;
+    position: relative;
+    left: 30px;
+    padding: 5px;
+    display: block;
+    border: 1px dashed grey;
+    background-color: #e9e9ee;
+}
+
+.header {
+    font-weight: bold;
+}
+
+.attr-before {
+    color: green;
+    cursor: text;
+}
+
+.attr-after {
+    color: red;
+    cursor: text;
+}
+
+.leaf {
+    font-weight: bold;
+}
+
+.old .cell .new {
+    display: none;
+}
+
+.new .cell .old {
+    display: none;
+}
+
+.both .cell .old {
+    opacity: 0.75;
+    color: red;
+}
+
+.both .cell .new {
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    color: green;
+}
+
+.spacer {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+#ot-panel {
+    max-height: 400px;
+    overflow-y: scroll;
+    background: white;
+    padding: 10px;
+    display: none;
+   }
+
+   .cell{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 5pt;
+    margin: 5pt;
+    width: 50pt;
+    font-size: var(--node-pt-size);
+    line-height: calc(var(--node-pt-size) * 1.5);
+  }
+  .cell-word{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 5pt;
+    margin: 5pt;
+    font-size: var(--node-pt-size);
+    line-height: calc(var(--node-pt-size) * 1.5);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .cell-glyph{
+    z-index: -100;
+    float: left;
+    display: block;
+    text-align: center;
+    border-radius: 5pt;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 5pt;
+    margin: 5pt;
+    width: calc(var(--node-pt-size) * 2);
+    min-height: calc(var(--node-pt-size) * 2);
+    font-size: var(--node-pt-size);
+  }
+  .cell-glyph.font-before, .cell-word.font-before {
+    background: #eff6f2;
+  }
+  .cell-glyph.font-after, .cell-word.font-after {
+    background: #f7f4f4;
+  }
+
+  .cell-glyph:hover {
+    box-shadow: none;
+    background: #f0f0f5;
+  }
+  .cat-strings .cell {
+    clear: both;
+    position: static;
+    float: none;
+    text-align: left;
+  }
+  .codepoint {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10pt;
+    line-height: 10pt;
+  }
+  .box-title {
+    clear: both;
+  }
+  .node.closed::before {
+    content: "+";
+    margin-right: 5pt;
+  }
+  .node.open::before {
+    content: "-";
+    margin-right: 5pt;
+  }
+
+  .tooltip pre {
+    background-color: #6f7882;
+    padding: 5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .tooltip {
+    line-height: 1em;
+  }
+  .tooltip-inner {
+    max-width: 300px;
+  }
+
+  h1,h2,h3,h4,h5 {
+    clear: both;
+  }
+
+  #locationnav li {
+    white-space: wrap;
+  }
+
+  #userdefined div { width: 100%; }
+  
+/* The following rules are used in the WASM version, not in the CLI version.
+   But we keep them here so we can share them between the two versions. */
+
+   .modal-dialog {
+    max-width: 100% !important;
+    margin: 0 !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+  }
+
+  .fontdrop {
+    padding: 30px;
+    border-radius: 20px;
+    outline: 3px dashed #ffffffff;
+    outline-offset: -20px;
+  }
+
+  #fontbefore {
+    background-color: #ddffdddd;
+  }
+
+  #fontafter {
+    background-color: #ffdddddd;
+  }
+
+  .dragging {
+    background-image: linear-gradient(rgb(0 0 0/5%) 0 0);
+    outline: 5px dashed #ffffffff;
+  }
+
+  #diffkerns {
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+		</style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+	integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+		<div id="ui-nav">
+		  <div class="ui-nav-item" id="fonttoggle">Old</div>
+		  <div class="ui-nav-item" id="fontanimate">Animate</div>
+		  <div id="axes">
+		  </div>
+		</div>
+	
+	<div class="row">
+		<div class="col-2">
+			<ul class="nav nav-pills" id="locationnav">
+			</ul>
+		</div>
+		<div class="col-9 mt-3">
+			<div id="title"></div>
+			<div id="cmapdiff"> </div>
+			<div id="main"></div>
+			<div id="userdefined">
+				<h4>User defined sample text</h4>
+				<div contenteditable="true" class="font-before cell-word">
+					You can type your own text here to see it previewed in the fonts.
+				</div>
+				<div style="clear: both"></div>
+			</div>
+			<div id="diffkerns"> </div>
+			<div id="difftable"> </div>
+		</div>
+	</div>
+	<script type="module">
+		function renderTableDiff(node, toplevel) {
+  var wrapper = $("<div> </div>");
+  if (!node) {
+    return wrapper;
+  }
+  if (Array.isArray(node) && node.length == 2) {
+    var before = $("<span/>");
+    before.addClass("attr-before");
+    before.html(" " + node[0] + " ");
+    var after = $("<span/>");
+    after.addClass("attr-after");
+    after.append(renderTableDiff(node[1], true).children());
+    wrapper.append(before);
+    wrapper.append(after);
+    return wrapper;
+  }
+  if (node.constructor != Object) {
+    var thing = $("<span/>");
+    thing.html(node);
+    wrapper.append(thing);
+    return wrapper;
+  }
+  for (const [key, value] of Object.entries(node)) {
+    var display = $("<div/>");
+    display.addClass("node");
+    if (!toplevel) {
+      display.hide();
+    }
+    display.append(key);
+    display.append(renderTableDiff(value, false).children());
+    if (display.children(".node").length > 0) {
+      display.addClass("closed");
+    }
+    wrapper.append(display);
+  }
+  return wrapper;
+}
+
+function addAGlyph(glyph, where) {
+  let title = "";
+  if (glyph.name) {
+    title = "name: " + glyph.name;
+  }
+  let cp =
+    "<br>U+" +
+    glyph.string.codePointAt(0).toString(16).padStart(4, "0").toUpperCase();
+  where.append(`
+        <div class="cell-glyph font-before">
+        <div data-toggle="tooltip" data-html="true" data-title="${glyph.differing_pixels} pixels"> ${glyph.string}
+        <div class="codepoint" data-toggle="tooltip" data-html="true" data-title="${title}">
+		${cp}
+        </div>
+        </div>
+    `);
+}
+
+function addAWord(diff, where) {
+  if (!diff.buffer_b) {
+    diff.buffer_b = diff.buffer_a;
+  }
+  where.append(`
+		<div class="cell-word font-before">
+		<span data-toggle="tooltip" data-html="true" data-title="Before: <pre>${diff.buffer_a}</pre>After: <pre>${diff.buffer_b}</pre><br>difference: ${diff.differing_pixels} pixels">
+		${diff.word}
+		</span>
+		</div>
+	`);
+}
+
+function diffTables(report) {
+  $("#difftable").empty();
+  $("#difftable").append(`<h4 class="mt-2 box-title">Table-level details</h4>`);
+  $("#difftable").append(
+    renderTableDiff({ tables: report["tables"] }, true).children()
+  );
+  $("#difftable .node").on("click", function (e) {
+    $(this).toggleClass("closed open");
+    $(this).children(".node").toggle();
+    e.stopPropagation();
+  });
+}
+function diffKerns(report) {
+  $("#diffkerns").empty();
+  $("#diffkerns").append(`<h4 class="mt-2">Modified Kerns</h4>`);
+  $("#diffkerns").append(
+    `<table class="table table-striped" id="diffkerns"><tr><th>Pair</th><th>Old</old><th>New</th></table>`
+  );
+  for (let [pair, value] of Object.entries(report["kerns"])) {
+    if (pair == "error") {
+      $("#diffkerns").append(`<p class="text-danger">Error: ${value}</p>`);
+      continue;
+    } else {
+      let row = $("<tr>");
+      row.append(`<td>${pair}</td>`);
+      row.append(`<td>${serializeKernBefore(value)}</td>`);
+      row.append(`<td>${serializeKernAfter(value)}</td>`);
+      $("#diffkerns table").append(row);
+    }
+  }
+}
+
+function serializeKernBefore(kern) {
+  if (Array.isArray(kern)) {
+    return serializeKern(kern[0], -1);
+  }
+  return serializeKern(kern, 0);
+}
+
+function serializeKernAfter(kern) {
+  if (Array.isArray(kern)) {
+    return serializeKern(kern[1], -1);
+  }
+  return serializeKern(kern, 1);
+}
+
+function serializeKern(kern, index) {
+  let string = "";
+  if (kern === null || kern === undefined) {
+    return "(null)";
+  }
+  if (kern.x) {
+    string += serializeKernValue(kern.x, index);
+  } else if (kern.y) {
+    string = "0";
+  }
+
+  if (kern.y) {
+    string += "," + serializeKernValue(kern.y, index);
+  }
+  if (!kern.x_placement && !kern.y_placement) {
+    return string;
+  }
+  string += "@";
+  if (kern.x_placement) {
+    string += serializeKernValue(kern.x_placement, index);
+  } else if (kern.y_placement) {
+    string += "0";
+  }
+  if (kern.y_placement) {
+    string += "," + serializeKernValue(kern.y_placement, index);
+  }
+  return string;
+}
+
+function serializeKernValue(kern, index) {
+  if (typeof kern == "number") {
+    return kern;
+  }
+  let string = "(";
+  let verybig = Object.entries(kern).length > 5;
+  for (let [key, value] of Object.entries(kern)) {
+    if (key == "default") {
+      string += value[index] + " ";
+    } else {
+      string += value[index] + "@" + key + " ";
+    }
+    if (verybig) {
+      string += "<br>";
+    }
+  }
+  return string.trim() + ")";
+}
+
+function cmapDiff(report) {
+  if (report.cmap_diff && (report.cmap_diff.new || report.cmap_diff.missing)) {
+    $("#cmapdiff").append(
+      `<h4 class="mt-2">Added and Removed Encoded Glyphs</h4>`
+    );
+    if (report["cmap_diff"]["new"]) {
+      $("#cmapdiff").append(`<h4 class="box-title">Added Glyphs</h4>`);
+      let added = $("<div>");
+      for (let glyph of report["cmap_diff"]["new"]) {
+        addAGlyph(glyph, added);
+      }
+      $("#cmapdiff").append(added);
+    }
+
+    if (report["cmap_diff"]["missing"]) {
+      $("#cmapdiff").append(`<h4 class="box-title">Removed Glyphs</h4>`);
+      let missing = $("<div>");
+      for (let glyph of report["cmap_diff"]["missing"]) {
+        addAGlyph(glyph, missing);
+      }
+      $("#cmapdiff").append(missing);
+    }
+  } else {
+    $("#cmapdiff").append(`<p>No changes to encoded glyphs</p>`);
+  }
+}
+
+function setupAnimation() {
+  $("#fonttoggle").click(function () {
+    if ($(this).text() == "Old") {
+      $(this).text("New");
+      $(".font-before").removeClass("font-before").addClass("font-after");
+    } else {
+      $(this).text("Old");
+      $(".font-after").removeClass("font-after").addClass("font-before");
+    }
+  });
+
+  let animationHandle;
+  function animate() {
+    $("#fonttoggle").click();
+    animationHandle = setTimeout(animate, 1000);
+  }
+  $("#fontanimate").click(function () {
+    if ($(this).text() == "Animate") {
+      $(this).text("Stop");
+      animate();
+    } else {
+      $(this).text("Animate");
+      clearTimeout(animationHandle);
+    }
+  });
+}
+
+export {
+  renderTableDiff,
+  addAGlyph,
+  addAWord,
+  cmapDiff,
+  diffTables,
+  diffKerns,
+  setupAnimation,
+};
+
+	var report = {"tables":{"GDEF":{"glyph_classes":{"u16FE4":["Mark","Base"]}},"GSUB":{"lookup_list":{"23":{"0":{"type":["sequence_context","chained_sequence_context"]},"1":{"type":["sequence_context","chained_sequence_context"],"rules":{"0":["u16FE4' lookup lookup_24","[uni25A1 uni2B1A u18B00 u18B01 u18B02 u18B03 u18B04 u18B05 u18B06 u18B07 u18B08 u18B09 u18B0A u18B0B u18B0C u18B0D u18B0E u18B0F u18B10 u18B11 u18B12 u18B13 u18B14 u18B15 u18B16 u18B17 u18B18 u18B19 u18B1A u18B1B u18B1C u18B1D u18B1E u18B1F u18B20 u18B21 u18B22 u18B23 u18B24 u18B25 u18B26 u18B27 u18B28 u18B29 u18B2A u18B2B u18B2C u18B2D u18B2E u18B2F u18B30 u18B31 u18B32 u18B33 u18B34 u18B35 u18B36 u18B37 u18B38 u18B39 u18B3A u18B3B u18B3C u18B3D u18B3E u18B3F u18B40 u18B41 u18B42 u18B43 u18B44 u18B45 u18B46 u18B47 u18B48 u18B49 u18B4A u18B4B u18B4C u18B4D u18B4E u18B4F u18B50 u18B51 u18B52 u18B53 u18B54 u18B55 u18B56 u18B57 u18B58 u18B59 u18B5A u18B5B u18B5C u18B5D u18B5E u18B5F u18B60 u18B61 u18B62 u18B63 u18B64 u18B65 u18B66 u18B67 u18B68 u18B69 u18B6A u18B6B u18B6C u18B6D u18B6E u18B6F u18B70 u18B71 u18B72 u18B73 u18B74 u18B75 u18B76 u18B77 u18B78 u18B79 u18B7A u18B7B u18B7C u18B7D u18B7E u18B7F u18B80 u18B81 u18B82 u18B83 u18B84 u18B85 u18B86 u18B87 u18B88 u18B89 u18B8A u18B8B u18B8C u18B8D u18B8E u18B8F u18B90 u18B91 u18B92 u18B93 u18B94 u18B95 u18B96 u18B97 u18B98 u18B99 u18B9A u18B9B u18B9C u18B9D u18B9E u18B9F u18BA0 u18BA1 u18BA2 u18BA3 u18BA4 u18BA5 u18BA6 u18BA7 u18BA8 u18BA9 u18BAA u18BAB u18BAC u18BAD u18BAE u18BAF u18BB0 u18BB1 u18BB2 u18BB3 u18BB4 u18BB5 u18BB6 u18BB7 u18BB8 u18BB9 u18BBA u18BBB u18BBC u18BBD u18BBE u18BBF u18BC0 u18BC1 u18BC2 u18BC3 u18BC4 u18BC5 u18BC6 u18BC7 u18BC8 u18BC9 u18BCA u18BCB u18BCC u18BCD u18BCE u18BCF u18BD0 u18BD1 u18BD2 u18BD3 u18BD4 u18BD5 u18BD6 u18BD7 u18BD8 u18BD9 u18BDA u18BDB u18BDC u18BDD u18BDE u18BDF u18BE0 u18BE1 u18BE2 u18BE3 u18BE4 u18BE5 u18BE6 u18BE7 u18BE8 u18BE9 u18BEA u18BEB u18BEC u18BED u18BEE u18BEF u18BF0 u18BF1 u18BF2 u18BF3 u18BF4 u18BF5 u18BF6 u18BF7 u18BF8 u18BF9 u18BFA u18BFB u18BFC u18BFD u18BFE u18BFF u18C00 u18C01 u18C02 u18C03 u18C04 u18C05 u18C06 u18C07 u18C08 u18C09 u18C0A u18C0B u18C0C u18C0D u18C0E u18C0F u18C10 u18C11 u18C12 u18C13 u18C14 u18C15 u18C16 u18C17 u18C18 u18C19 u18C1A u18C1B u18C1C u18C1D u18C1E u18C1F u18C20 u18C21 u18C22 u18C23 u18C24 u18C25 u18C26 u18C27 u18C28 u18C29 u18C2A u18C2B u18C2C u18C2D u18C2E u18C2F u18C30 u18C31 u18C32 u18C33 u18C34 u18C35 u18C36 u18C37 u18C38 u18C39 u18C3A u18C3B u18C3C u18C3D u18C3E u18C3F u18C40 u18C41 u18C42 u18C43 u18C44 u18C45 u18C46 u18C47 u18C48 u18C49 u18C4A u18C4B u18C4C u18C4D u18C4E u18C4F u18C50 u18C51 u18C52 u18C53 u18C54 u18C55 u18C56 u18C57 u18C58 u18C59 u18C5A u18C5B u18C5C u18C5D u18C5E u18C5F u18C60 u18C61 u18C62 u18C63 u18C64 u18C65 u18C66 u18C67 u18C68 u18C69 u18C6A u18C6B u18C6C u18C6D u18C6E u18C6F u18C70 u18C71 u18C72 u18C73 u18C74 u18C75 u18C76 u18C77 u18C78 u18C79 u18C7A u18C7B u18C7C u18C7D u18C7E u18C7F u18C80 u18C81 u18C82 u18C83 u18C84 u18C85 u18C86 u18C87 u18C88 u18C89 u18C8A u18C8B u18C8C u18C8D u18C8E u18C8F u18C90 u18C91 u18C92 u18C93 u18C94 u18C95 u18C96 u18C97 u18C98 u18C99 u18C9A u18C9B u18C9C u18C9D u18C9E u18C9F u18CA0 u18CA1 u18CA2 u18CA3 u18CA4 u18CA5 u18CA6 u18CA7 u18CA8 u18CA9 u18CAA u18CAB u18CAC u18CAD u18CAE u18CAF u18CB0 u18CB1 u18CB2 u18CB3 u18CB4 u18CB5 u18CB6 u18CB7 u18CB8 u18CB9 u18CBA u18CBB u18CBC u18CBD u18CBE u18CBF u18CC0 u18CC1 u18CC2 u18CC3 u18CC4 u18CC5 u18CC6 u18CC7 u18CC8 u18CC9 u18CCA u18CCB u18CCC u18CCD u18CCE u18CCF u18CD0 u18CD1 u18CD2 u18CD3 u18CD4 u18CD5] u16FE4' lookup lookup_24"]}},"2":[null,{"type":"chained_sequence_context","rules":["u16FE4' lookup lookup_24 [uni25A1 uni2B1A u18B00 u18B01 u18B02 u18B03 u18B04 u18B05 u18B06 u18B07 u18B08 u18B09 u18B0A u18B0B u18B0C u18B0D u18B0E u18B0F u18B10 u18B11 u18B12 u18B13 u18B14 u18B15 u18B16 u18B17 u18B18 u18B19 u18B1A u18B1B u18B1C u18B1D u18B1E u18B1F u18B20 u18B21 u18B22 u18B23 u18B24 u18B25 u18B26 u18B27 u18B28 u18B29 u18B2A u18B2B u18B2C u18B2D u18B2E u18B2F u18B30 u18B31 u18B32 u18B33 u18B34 u18B35 u18B36 u18B37 u18B38 u18B39 u18B3A u18B3B u18B3C u18B3D u18B3E u18B3F u18B40 u18B41 u18B42 u18B43 u18B44 u18B45 u18B46 u18B47 u18B48 u18B49 u18B4A u18B4B u18B4C u18B4D u18B4E u18B4F u18B50 u18B51 u18B52 u18B53 u18B54 u18B55 u18B56 u18B57 u18B58 u18B59 u18B5A u18B5B u18B5C u18B5D u18B5E u18B5F u18B60 u18B61 u18B62 u18B63 u18B64 u18B65 u18B66 u18B67 u18B68 u18B69 u18B6A u18B6B u18B6C u18B6D u18B6E u18B6F u18B70 u18B71 u18B72 u18B73 u18B74 u18B75 u18B76 u18B77 u18B78 u18B79 u18B7A u18B7B u18B7C u18B7D u18B7E u18B7F u18B80 u18B81 u18B82 u18B83 u18B84 u18B85 u18B86 u18B87 u18B88 u18B89 u18B8A u18B8B u18B8C u18B8D u18B8E u18B8F u18B90 u18B91 u18B92 u18B93 u18B94 u18B95 u18B96 u18B97 u18B98 u18B99 u18B9A u18B9B u18B9C u18B9D u18B9E u18B9F u18BA0 u18BA1 u18BA2 u18BA3 u18BA4 u18BA5 u18BA6 u18BA7 u18BA8 u18BA9 u18BAA u18BAB u18BAC u18BAD u18BAE u18BAF u18BB0 u18BB1 u18BB2 u18BB3 u18BB4 u18BB5 u18BB6 u18BB7 u18BB8 u18BB9 u18BBA u18BBB u18BBC u18BBD u18BBE u18BBF u18BC0 u18BC1 u18BC2 u18BC3 u18BC4 u18BC5 u18BC6 u18BC7 u18BC8 u18BC9 u18BCA u18BCB u18BCC u18BCD u18BCE u18BCF u18BD0 u18BD1 u18BD2 u18BD3 u18BD4 u18BD5 u18BD6 u18BD7 u18BD8 u18BD9 u18BDA u18BDB u18BDC u18BDD u18BDE u18BDF u18BE0 u18BE1 u18BE2 u18BE3 u18BE4 u18BE5 u18BE6 u18BE7 u18BE8 u18BE9 u18BEA u18BEB u18BEC u18BED u18BEE u18BEF u18BF0 u18BF1 u18BF2 u18BF3 u18BF4 u18BF5 u18BF6 u18BF7 u18BF8 u18BF9 u18BFA u18BFB u18BFC u18BFD u18BFE u18BFF u18C00 u18C01 u18C02 u18C03 u18C04 u18C05 u18C06 u18C07 u18C08 u18C09 u18C0A u18C0B u18C0C u18C0D u18C0E u18C0F u18C10 u18C11 u18C12 u18C13 u18C14 u18C15 u18C16 u18C17 u18C18 u18C19 u18C1A u18C1B u18C1C u18C1D u18C1E u18C1F u18C20 u18C21 u18C22 u18C23 u18C24 u18C25 u18C26 u18C27 u18C28 u18C29 u18C2A u18C2B u18C2C u18C2D u18C2E u18C2F u18C30 u18C31 u18C32 u18C33 u18C34 u18C35 u18C36 u18C37 u18C38 u18C39 u18C3A u18C3B u18C3C u18C3D u18C3E u18C3F u18C40 u18C41 u18C42 u18C43 u18C44 u18C45 u18C46 u18C47 u18C48 u18C49 u18C4A u18C4B u18C4C u18C4D u18C4E u18C4F u18C50 u18C51 u18C52 u18C53 u18C54 u18C55 u18C56 u18C57 u18C58 u18C59 u18C5A u18C5B u18C5C u18C5D u18C5E u18C5F u18C60 u18C61 u18C62 u18C63 u18C64 u18C65 u18C66 u18C67 u18C68 u18C69 u18C6A u18C6B u18C6C u18C6D u18C6E u18C6F u18C70 u18C71 u18C72 u18C73 u18C74 u18C75 u18C76 u18C77 u18C78 u18C79 u18C7A u18C7B u18C7C u18C7D u18C7E u18C7F u18C80 u18C81 u18C82 u18C83 u18C84 u18C85 u18C86 u18C87 u18C88 u18C89 u18C8A u18C8B u18C8C u18C8D u18C8E u18C8F u18C90 u18C91 u18C92 u18C93 u18C94 u18C95 u18C96 u18C97 u18C98 u18C99 u18C9A u18C9B u18C9C u18C9D u18C9E u18C9F u18CA0 u18CA1 u18CA2 u18CA3 u18CA4 u18CA5 u18CA6 u18CA7 u18CA8 u18CA9 u18CAA u18CAB u18CAC u18CAD u18CAE u18CAF u18CB0 u18CB1 u18CB2 u18CB3 u18CB4 u18CB5 u18CB6 u18CB7 u18CB8 u18CB9 u18CBA u18CBB u18CBC u18CBD u18CBE u18CBF u18CC0 u18CC1 u18CC2 u18CC3 u18CC4 u18CC5 u18CC6 u18CC7 u18CC8 u18CC9 u18CCA u18CCB u18CCC u18CCD u18CCE u18CCF u18CD0 u18CD1 u18CD2 u18CD3 u18CD4 u18CD5]"]}]}}},"head":{"checksum_adjustment":[1113225876,133655468],"modified":[3756287855,3813912371]},"hhea":{"min_right_side_bearing":[-850,7]},"hmtx":{"u16FE4":{"width":[0,1000]}},"name":{"UNIQUE_ID":{"en-US":["1.000;GOOG;NotoSerifKhitanSmallScript-Regular","1.000;GOOG;NotoSerifKhitanSmallScript"]},"POSTSCRIPT_NAME":{"en-US":["NotoSerifKhitanSmallScript-Regular","NotoSerifKhitanSmallScript"]}}},"cmap_diff":{},"locations":[{"location":"Default","glyphs":[{"string":"𖿤","name":"KHITAN SMALL SCRIPT FILLER","unicode":"U+16FE4","differing_pixels":208}],"words":{}}]};
+		function buildLocation_statichtml(loc) {
+  // Set font styles to appropriate axis locations
+  let rule = document.styleSheets[0].cssRules[2].style;
+  let cssSetting = "";
+  let textLocation = "Default";
+  if (loc.coords) {
+    cssSetting = Object.entries(loc.coords)
+      .map(function ([axis, value]) {
+        return `"${axis}" ${value}`;
+      })
+      .join(", ");
+    textLocation = Object.entries(loc.coords)
+      .map(function ([axis, value]) {
+        return `${axis}=${value}`;
+      })
+      .join(" ");
+    rule.setProperty("font-variation-settings", cssSetting);
+  }
+
+  $("#main").empty();
+
+  $("#title").html(`<h4 class="mt-2">${textLocation}</h2>`);
+
+  if (loc.glyphs) {
+    $("#main").append("<h4>Modified Glyphs</h4>");
+    let glyphs = $("<div>");
+    for (let glyph of loc.glyphs) {
+      addAGlyph(glyph, glyphs);
+    }
+    $("#main").append(glyphs);
+  }
+
+  if (loc.words) {
+    $("#main").append("<h4>Modified Words</h4>");
+    for (let [script, words] of Object.entries(loc.words)) {
+      let scriptTitle = $(`<h6>${script}</h6>`);
+      $("#main").append(scriptTitle);
+      let worddiv = $("<div>");
+      for (let word of words) {
+        addAWord(word, worddiv);
+      }
+      $("#main").append(worddiv);
+    }
+  }
+  $('[data-toggle="tooltip"]').tooltip();
+}
+
+$(function () {
+  if (report["tables"]) {
+    diffTables(report);
+  }
+  if (report["kerns"]) {
+    diffKerns(report);
+  }
+  cmapDiff(report);
+  $('[data-toggle="tooltip"]').tooltip();
+  if (!report["locations"]) {
+    $("#title").html("<h4 class='mt-2'>No differences found</h4>");
+    $("#ui-nav").hide();
+    return;
+  }
+
+  for (var [index, loc] of report["locations"].entries()) {
+    var loc_nav = $(`<li class="nav-item">
+		<a class="nav-link text-secondary" href="#" data-index="${index}">${loc.location.replaceAll(
+      ",",
+      ",\u200b"
+    )}</a>
+	</li>`);
+    $("#locationnav").append(loc_nav);
+  }
+  $("#locationnav li a").on("click", function (e) {
+    $("#locationnav li a").removeClass("active");
+    $(this).addClass("active");
+    buildLocation_statichtml(report.locations[$(this).data("index")]);
+  });
+  $("#locationnav li a").eq(0).click();
+
+  document.styleSheets[0].cssRules[0].style.setProperty(
+    "src",
+    "url(old-NotoSerifKhitanSmallScript-Regular.ttf)"
+  );
+  document.styleSheets[0].cssRules[1].style.setProperty(
+    "src",
+    "url(new-NotoSerifKhitanSmallScript-Regular.ttf)"
+  );
+  setupAnimation();
+});
+
+	</script>
+</body>
+
+</html>
