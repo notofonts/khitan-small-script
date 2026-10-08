@@ -190,7 +190,7 @@
     <key>openTypeNameSampleText</key>
     <string>𘲇 𘮝 𘱚𘮒𘲦 𘭅𘭂𘬐 𘮉 𘬞𘱞 𘬓𘰫 𘱚𘮰 𘱄𘱹𘲚 𘬥𘯺𘭗 𘲽𘲑 𘯴𘰷 𘲅𘯺𘬐 𘱆 𘭕𘰕 𘱄𘭏 𘬥𘯺𘬐 𘲱𘱶𘱤 𘲜𘮢𘲫 𘰷𘰗𘱤</string>
     <key>openTypeNameVersion</key>
-    <string>Version 2.100</string>
+    <string>Version 2.200</string>
     <key>openTypeOS2CodePageRanges</key>
     <array>
       <integer>18</integer>
@@ -231,7 +231,7 @@
     <key>versionMajor</key>
     <integer>2</integer>
     <key>versionMinor</key>
-    <integer>100</integer>
+    <integer>200</integer>
     <key>year</key>
     <integer>2023</integer>
   </dict>
