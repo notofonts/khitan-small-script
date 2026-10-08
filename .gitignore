@@ -7,6 +7,13 @@ node_modules
 package-lock.json
 package.json
 
+# By-products of the gftools-builder build #
+###########################################
+sources/build.ninja
+sources/.ninja_log
+sources/full-designspace/
+sources/instance_ufos/
+
 # OS generated files #
 ######################
 .DS_Store
