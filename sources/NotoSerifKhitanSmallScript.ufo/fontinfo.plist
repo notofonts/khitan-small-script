@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>ascender</key>
+    <integer>2380</integer>
+    <key>copyright</key>
+    <string>Copyright 2026 Google LLC. All Rights Reserved.</string>
+    <key>descender</key>
+    <integer>-1620</integer>
+    <key>familyName</key>
+    <string>Noto Serif Khitan Small Script</string>
+    <key>openTypeNameDescription</key>
+    <string>The typeface is designed based on the purpose of text use, using a more writing-oriented FangSong style font, easy to read and more compatible with the typeface of the text. The updated font is designed by LIU Zhao and SHAO Lansu, and the OpenType layout is redesigned by Kushim JIANG.</string>
+    <key>openTypeNameDesigner</key>
+    <string>LIU Zhao, SHAO Lansu, Kushim JIANG</string>
+    <key>openTypeNameDesignerURL</key>
+    <string>https://i.cafa.edu.cn/sub_artist/fac/r/?ai=110934</string>
+    <key>openTypeNameLicense</key>
+    <string>This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.</string>
+    <key>openTypeNameLicenseURL</key>
+    <string>https://scripts.sil.org/OFL</string>
+    <key>openTypeNameManufacturer</key>
+    <string>LiuZhao Studio</string>
+    <key>openTypeNameManufacturerURL</key>
+    <string>https://fonts.google.com/noto/</string>
+    <key>openTypeNamePreferredFamilyName</key>
+    <string>Noto Serif Khitan Small Script</string>
+    <key>openTypeNamePreferredSubfamilyName</key>
+    <string>Regular</string>
+    <key>openTypeNameRecords</key>
+    <array>
+      <dict>
+        <key>encodingID</key>
+        <integer>0</integer>
+        <key>languageID</key>
+        <integer>0</integer>
+        <key>nameID</key>
+        <integer>0</integer>
+        <key>platformID</key>
+        <integer>1</integer>
+        <key>string</key>
+        <string>Copyright 2026 Google LLC. All Rights Reserved.</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>1</integer>
+        <key>languageID</key>
+        <integer>2052</integer>
+        <key>nameID</key>
+        <integer>0</integer>
+        <key>platformID</key>
+        <integer>3</integer>
+        <key>string</key>
+        <string>版权所有 2026 谷歌有限责任公司。保留所有权利。</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>0</integer>
+        <key>languageID</key>
+        <integer>0</integer>
+        <key>nameID</key>
+        <integer>7</integer>
+        <key>platformID</key>
+        <integer>1</integer>
+        <key>string</key>
+        <string>Noto is a trademark of Google Inc.</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>1</integer>
+        <key>languageID</key>
+        <integer>2052</integer>
+        <key>nameID</key>
+        <integer>7</integer>
+        <key>platformID</key>
+        <integer>3</integer>
+        <key>string</key>
+        <string>Noto 是谷歌公司的一个商标。</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>0</integer>
+        <key>languageID</key>
+        <integer>0</integer>
+        <key>nameID</key>
+        <integer>8</integer>
+        <key>platformID</key>
+        <integer>1</integer>
+        <key>string</key>
+        <string>LiuZhao Studio</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>1</integer>
+        <key>languageID</key>
+        <integer>2052</integer>
+        <key>nameID</key>
+        <integer>8</integer>
+        <key>platformID</key>
+        <integer>3</integer>
+        <key>string</key>
+        <string>刘钊工作室</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>0</integer>
+        <key>languageID</key>
+        <integer>0</integer>
+        <key>nameID</key>
+        <integer>9</integer>
+        <key>platformID</key>
+        <integer>1</integer>
+        <key>string</key>
+        <string>LIU Zhao, SHAO Lansu, Kushim JIANG</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>1</integer>
+        <key>languageID</key>
+        <integer>2052</integer>
+        <key>nameID</key>
+        <integer>9</integer>
+        <key>platformID</key>
+        <integer>3</integer>
+        <key>string</key>
+        <string>刘钊、邵兰苏、姜兆勤</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>0</integer>
+        <key>languageID</key>
+        <integer>0</integer>
+        <key>nameID</key>
+        <integer>10</integer>
+        <key>platformID</key>
+        <integer>1</integer>
+        <key>string</key>
+        <string>The typeface is designed based on the purpose of text use, using a more writing-oriented FangSong style font, easy to read and more compatible with the typeface of the text. The updated font is designed by LIU Zhao and SHAO Lansu, and the OpenType layout is redesigned by Kushim JIANG.</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>1</integer>
+        <key>languageID</key>
+        <integer>2052</integer>
+        <key>nameID</key>
+        <integer>10</integer>
+        <key>platformID</key>
+        <integer>3</integer>
+        <key>string</key>
+        <string>本字体基于正文使用为目的进行设计，采用更偏重书写风格的仿宋字体，便于阅读并与正文的字体风格更加匹配。本字体由刘钊与邵兰苏更新，OpenType特性由姜兆勤重新编写。</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>0</integer>
+        <key>languageID</key>
+        <integer>0</integer>
+        <key>nameID</key>
+        <integer>16</integer>
+        <key>platformID</key>
+        <integer>1</integer>
+        <key>string</key>
+        <string>Noto Serif Khitan Small Script Regular</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>1</integer>
+        <key>languageID</key>
+        <integer>2052</integer>
+        <key>nameID</key>
+        <integer>16</integer>
+        <key>platformID</key>
+        <integer>3</integer>
+        <key>string</key>
+        <string>Noto 契丹小字宋体 常规体</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>4</integer>
+        <key>languageID</key>
+        <integer>0</integer>
+        <key>nameID</key>
+        <integer>19</integer>
+        <key>platformID</key>
+        <integer>0</integer>
+        <key>string</key>
+        <string>𘲇 𘮝 𘱚𘮒𘲦 𘭅𘭂𘬐 𘮉 𘬞𘱞 𘬓𘰫 𘱚𘮰 𘱄𘱹𘲚 𘬥𘯺𘭗 𘲽𘲑 𘯴𘰷 𘲅𘯺𘬐 𘱆 𘭕𘰕 𘱄𘭏 𘬥𘯺𘬐 𘲱𘱶𘱤 𘲜𘮢𘲫 𘰷𘰗𘱤</string>
+      </dict>
+    </array>
+    <key>openTypeNameSampleText</key>
+    <string>𘲇 𘮝 𘱚𘮒𘲦 𘭅𘭂𘬐 𘮉 𘬞𘱞 𘬓𘰫 𘱚𘮰 𘱄𘱹𘲚 𘬥𘯺𘭗 𘲽𘲑 𘯴𘰷 𘲅𘯺𘬐 𘱆 𘭕𘰕 𘱄𘭏 𘬥𘯺𘬐 𘲱𘱶𘱤 𘲜𘮢𘲫 𘰷𘰗𘱤</string>
+    <key>openTypeNameVersion</key>
+    <string>Version 2.100</string>
+    <key>openTypeOS2CodePageRanges</key>
+    <array>
+      <integer>18</integer>
+      <integer>20</integer>
+    </array>
+    <key>openTypeOS2TypoAscender</key>
+    <integer>880</integer>
+    <key>openTypeOS2TypoDescender</key>
+    <integer>-120</integer>
+    <key>openTypeOS2TypoLineGap</key>
+    <integer>120</integer>
+    <key>openTypeOS2UnicodeRanges</key>
+    <array>
+      <integer>0</integer>
+      <integer>59</integer>
+      <integer>57</integer>
+    </array>
+    <key>openTypeOS2VendorID</key>
+    <string>LZS</string>
+    <key>openTypeOS2WeightClass</key>
+    <integer>400</integer>
+    <key>openTypeVheaVertTypoAscender</key>
+    <integer>500</integer>
+    <key>openTypeVheaVertTypoDescender</key>
+    <integer>-500</integer>
+    <key>openTypeVheaVertTypoLineGap</key>
+    <integer>0</integer>
+    <key>styleMapFamilyName</key>
+    <string>Noto Serif Khitan Small Script</string>
+    <key>styleMapStyleName</key>
+    <string>regular</string>
+    <key>styleName</key>
+    <string>Regular</string>
+    <key>trademark</key>
+    <string>Noto is a trademark of Google Inc.</string>
+    <key>unitsPerEm</key>
+    <integer>1000</integer>
+    <key>versionMajor</key>
+    <integer>2</integer>
+    <key>versionMinor</key>
+    <integer>100</integer>
+    <key>year</key>
+    <integer>2023</integer>
+  </dict>
+</plist>

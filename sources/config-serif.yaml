@@ -6,4 +6,4 @@ includeSubsets:
   name: GF_Latin_Core
 recipeProvider: noto
 sources:
-- NotoSerifKhitanSmallScript.glyphspackage
+- NotoSerifKhitanSmallScript.designspace
