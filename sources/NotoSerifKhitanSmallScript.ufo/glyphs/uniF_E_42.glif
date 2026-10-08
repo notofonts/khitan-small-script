@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFE42" format="2">
+  <advance height="1000" width="1000"/>
+  <unicode hex="FE42"/>
+  <outline>
+    <contour>
+      <point x="25" y="533" type="line"/>
+      <point x="738" y="533" type="line"/>
+      <point x="738" y="568" type="line"/>
+      <point x="62" y="568" type="line"/>
+      <point x="62" y="839" type="line"/>
+      <point x="25" y="839" type="line"/>
+    </contour>
+  </outline>
+</glyph>

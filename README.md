@@ -1,4 +1,4 @@
-# Noto Khitan-Small-Script
+# Noto Serif Khitan Small Script
 
 [![][Fontbakery]](https://notofonts.github.io/khitan-small-script/fontbakery/fontbakery-report.html)
 [![][Universal]](https://notofonts.github.io/khitan-small-script/fontbakery/fontbakery-report.html)
@@ -15,9 +15,9 @@
 
 ## Design
 
-Noto Khitan Small Script is designed based on the purpose of text use, using a more writing-oriented FangSong style font, easy to read and more compatible with the typeface of the text.
+Noto Serif Khitan Small Script is designed based on the purpose of text use, using a more writing-oriented FangSong style font, easy to read and more compatible with the typeface of the text.
 
-The font is designed by LIU Zhao and ZHANG Congyu, and the OpenType layout is designed by Kushim JIANG.
+The font is designed by LIU Zhao and ZHANG Congyu, and the OpenType layout is designed by Kushim JIANG. The updated font is designed by LIU Zhao and SHAO Lansu, and the OpenType layout is redesigned by Kushim JIANG.
 
 ## Building
 

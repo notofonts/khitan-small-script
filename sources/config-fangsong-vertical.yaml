@@ -1,9 +1,0 @@
-buildVariable: false
-familyName: Noto Fangsong KSS Vertical
-googleFonts: false
-includeSubsets:
-- from: Noto Serif
-  name: GF_Latin_Core
-recipeProvider: noto
-sources:
-- NotoFangsongKSSVertical.glyphspackage

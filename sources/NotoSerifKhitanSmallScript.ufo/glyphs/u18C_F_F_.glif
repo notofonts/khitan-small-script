@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="u18CFF" format="2">
+  <advance height="1000" width="1000"/>
+  <unicode hex="18CFF"/>
+  <outline>
+    <contour>
+      <point x="150" y="30" type="line"/>
+      <point x="850" y="30" type="line"/>
+      <point x="850" y="730" type="line"/>
+      <point x="150" y="730" type="line"/>
+    </contour>
+    <contour>
+      <point x="200" y="80" type="line"/>
+      <point x="200" y="680" type="line"/>
+      <point x="800" y="680" type="line"/>
+      <point x="800" y="80" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.category</key>
+      <string>Letter</string>
+      <key>com.schriftgestaltung.Glyphs.script</key>
+      <string>han</string>
+    </dict>
+  </lib>
+</glyph>
