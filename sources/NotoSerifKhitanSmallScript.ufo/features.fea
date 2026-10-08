@@ -591,120 +591,100 @@ feature rclt {
     lookup kss.default;
 } rclt;
 
+lookup kss.grid {
+    lookupflag 0;
+    pos @kss.nominal <500 0 1000 0>;
+} kss.grid;
+
+lookup kss.stacking {
+    lookupflag 0;
+    pos @kss.nominal' <-500 1500 0 0> @kss.nominal' <-1500 1500 -2000 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2500 -1500 -2000 0> @kss.nominal' <-1500 -1500 -2000 0>;
+    pos @kss.nominal' <0 1500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2500 -1500 -2000 0> @kss.nominal' <-1500 -1500 -2000 0>;
+    pos @kss.nominal' <-500 1500 0 0> @kss.nominal' <-1500 1500 -2000 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2000 -1500 -2000 0>;
+    pos @kss.nominal' <0 1500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2000 -1500 -2000 0>;
+    pos @kss.nominal' <-500 1000 0 0> @kss.nominal' <-1500 1000 -2000 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2500 -1000 -2000 0> @kss.nominal' <-1500 -1000 -2000 0>;
+    pos @kss.nominal' <0 1000 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2500 -1000 -2000 0> @kss.nominal' <-1500 -1000 -2000 0>;
+    pos @kss.nominal' <-500 1000 0 0> @kss.nominal' <-1500 1000 -2000 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2000 -1000 -2000 0>;
+    pos @kss.nominal' <0 1000 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2000 -1000 -2000 0>;
+    pos @kss.nominal' <-500 500 0 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0>;
+    pos @kss.nominal' <0 500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0>;
+    pos @kss.nominal' <-500 500 0 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2000 -500 -2000 0>;
+    pos @kss.nominal' <0 500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2000 -500 -2000 0>;
+    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <-1500 0 -2000 0>;
+    pos @kss.nominal' <-500 0 -1000 0> kss.blank;
+} kss.stacking;
+
+lookup kss.vertical {
+    lookupflag 0;
+    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
+    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
+    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
+    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
+    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
+    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
+    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
+    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
+    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
+    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
+    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
+    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <0 0 0 0>;
+    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
+} kss.vertical;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup kss.grid;
+} rclt;
+
+feature rclt {
+    script hani;
+    language dflt;
+    lookup kss.grid;
+} rclt;
+
+feature rclt {
+    script latn;
+    language dflt;
+    lookup kss.grid;
+} rclt;
+
+feature rclt {
+    script DFLT;
+    language dflt;
+    lookup kss.stacking;
+} rclt;
+
+feature rclt {
+    script hani;
+    language dflt;
+    lookup kss.stacking;
+} rclt;
+
+feature rclt {
+    script latn;
+    language dflt;
+    lookup kss.stacking;
+} rclt;
+
+feature vert {
+    script DFLT;
+    language dflt;
+    lookup kss.vertical;
+} vert;
+
+feature vert {
+    script hani;
+    language dflt;
+    lookup kss.vertical;
+} vert;
+
+feature vert {
+    script latn;
+    language dflt;
+    lookup kss.vertical;
+} vert;
+
 table GDEF {
-    GlyphClassDef [@BASE], , , ;
+    GlyphClassDef @BASE, , , ;
 } GDEF;
-
-feature rclt {
-    script DFLT;
-    language dflt;
-    pos @kss.nominal <500 0 1000 0>;
-    pos @kss.nominal' <-500 1500 0 0> @kss.nominal' <-1500 1500 -2000 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2500 -1500 -2000 0> @kss.nominal' <-1500 -1500 -2000 0>;
-    pos @kss.nominal' <0 1500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2500 -1500 -2000 0> @kss.nominal' <-1500 -1500 -2000 0>;
-    pos @kss.nominal' <-500 1500 0 0> @kss.nominal' <-1500 1500 -2000 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2000 -1500 -2000 0>;
-    pos @kss.nominal' <0 1500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2000 -1500 -2000 0>;
-    pos @kss.nominal' <-500 1000 0 0> @kss.nominal' <-1500 1000 -2000 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2500 -1000 -2000 0> @kss.nominal' <-1500 -1000 -2000 0>;
-    pos @kss.nominal' <0 1000 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2500 -1000 -2000 0> @kss.nominal' <-1500 -1000 -2000 0>;
-    pos @kss.nominal' <-500 1000 0 0> @kss.nominal' <-1500 1000 -2000 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2000 -1000 -2000 0>;
-    pos @kss.nominal' <0 1000 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2000 -1000 -2000 0>;
-    pos @kss.nominal' <-500 500 0 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0>;
-    pos @kss.nominal' <0 500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0>;
-    pos @kss.nominal' <-500 500 0 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2000 -500 -2000 0>;
-    pos @kss.nominal' <0 500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2000 -500 -2000 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <-1500 0 -2000 0>;
-    pos @kss.nominal' <-500 0 -1000 0> kss.blank;
-} rclt;
-
-feature rclt {
-    script latn;
-    language dflt;
-    pos @kss.nominal <500 0 1000 0>;
-    pos @kss.nominal' <-500 1500 0 0> @kss.nominal' <-1500 1500 -2000 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2500 -1500 -2000 0> @kss.nominal' <-1500 -1500 -2000 0>;
-    pos @kss.nominal' <0 1500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2500 -1500 -2000 0> @kss.nominal' <-1500 -1500 -2000 0>;
-    pos @kss.nominal' <-500 1500 0 0> @kss.nominal' <-1500 1500 -2000 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2000 -1500 -2000 0>;
-    pos @kss.nominal' <0 1500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2000 -1500 -2000 0>;
-    pos @kss.nominal' <-500 1000 0 0> @kss.nominal' <-1500 1000 -2000 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2500 -1000 -2000 0> @kss.nominal' <-1500 -1000 -2000 0>;
-    pos @kss.nominal' <0 1000 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2500 -1000 -2000 0> @kss.nominal' <-1500 -1000 -2000 0>;
-    pos @kss.nominal' <-500 1000 0 0> @kss.nominal' <-1500 1000 -2000 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2000 -1000 -2000 0>;
-    pos @kss.nominal' <0 1000 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2000 -1000 -2000 0>;
-    pos @kss.nominal' <-500 500 0 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0>;
-    pos @kss.nominal' <0 500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0>;
-    pos @kss.nominal' <-500 500 0 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2000 -500 -2000 0>;
-    pos @kss.nominal' <0 500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2000 -500 -2000 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <-1500 0 -2000 0>;
-    pos @kss.nominal' <-500 0 -1000 0> kss.blank;
-} rclt;
-
-feature rclt {
-    script hani;
-    language dflt;
-    pos @kss.nominal <500 0 1000 0>;
-    pos @kss.nominal' <-500 1500 0 0> @kss.nominal' <-1500 1500 -2000 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2500 -1500 -2000 0> @kss.nominal' <-1500 -1500 -2000 0>;
-    pos @kss.nominal' <0 1500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2500 -1500 -2000 0> @kss.nominal' <-1500 -1500 -2000 0>;
-    pos @kss.nominal' <-500 1500 0 0> @kss.nominal' <-1500 1500 -2000 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2000 -1500 -2000 0>;
-    pos @kss.nominal' <0 1500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 500 -2000 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0> @kss.nominal' <-2000 -1500 -2000 0>;
-    pos @kss.nominal' <-500 1000 0 0> @kss.nominal' <-1500 1000 -2000 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2500 -1000 -2000 0> @kss.nominal' <-1500 -1000 -2000 0>;
-    pos @kss.nominal' <0 1000 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2500 -1000 -2000 0> @kss.nominal' <-1500 -1000 -2000 0>;
-    pos @kss.nominal' <-500 1000 0 0> @kss.nominal' <-1500 1000 -2000 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2000 -1000 -2000 0>;
-    pos @kss.nominal' <0 1000 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 0 -2000 0> @kss.nominal' <-1500 0 -2000 0> @kss.nominal' <-2000 -1000 -2000 0>;
-    pos @kss.nominal' <-500 500 0 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0>;
-    pos @kss.nominal' <0 500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2500 -500 -2000 0> @kss.nominal' <-1500 -500 -2000 0>;
-    pos @kss.nominal' <-500 500 0 0> @kss.nominal' <-1500 500 -2000 0> @kss.nominal' <-2000 -500 -2000 0>;
-    pos @kss.nominal' <0 500 0 0> kssf' <0 0 0 0> @kss.nominal' <-2000 -500 -2000 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <-1500 0 -2000 0>;
-    pos @kss.nominal' <-500 0 -1000 0> kss.blank;
-} rclt;
-
-feature vert {
-    script DFLT;
-    language dflt;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-} vert;
-
-feature vert {
-    script latn;
-    language dflt;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-} vert;
-
-feature vert {
-    script hani;
-    language dflt;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <0 0 0 0> kssf' <0 0 0 0> @kss.nominal' <0 0 0 0>;
-    pos @kss.nominal' <-500 0 0 0> @kss.nominal' <500 1000 0 -1000>;
-} vert;
