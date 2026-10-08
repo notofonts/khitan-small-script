@@ -6,6 +6,7 @@ fonts
 node_modules
 package-lock.json
 package.json
+subset-files/
 
 # By-products of the gftools-builder build #
 ###########################################
